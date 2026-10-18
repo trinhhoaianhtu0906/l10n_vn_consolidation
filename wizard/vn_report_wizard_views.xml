@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vn_report_wizard_view_form_consolidation" model="ir.ui.view">
+        <field name="name">vn.report.wizard.form.consolidation</field>
+        <field name="model">vn.report.wizard</field>
+        <field name="inherit_id" ref="l10n_vn_tt99_reports.vn_report_wizard_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='report_id']" position="before">
+                <field name="consolidation_group_id" options="{'no_create': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="readonly">consolidation_group_id</attribute>
+            </xpath>
+            <xpath expr="//field[@name='include_branches']" position="attributes">
+                <attribute name="invisible">consolidation_group_id</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="vn_dynamic_report_action_consolidated" model="ir.actions.client">
+        <field name="name">Báo cáo hợp nhất</field>
+        <field name="tag">l10n_vn_tt99_reports.dynamic_report</field>
+        <field name="context" eval="{'default_report_id': ref('report_b01_hn')}"/>
+    </record>
+</odoo>

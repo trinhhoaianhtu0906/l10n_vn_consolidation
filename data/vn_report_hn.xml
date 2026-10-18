@@ -1,0 +1,1486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_b01_hn" model="vn.report">
+        <field name="name">B01-DN/HN Báo cáo tình hình tài chính hợp nhất</field>
+        <field name="code">B01-DN/HN</field>
+        <field name="sequence">50</field>
+        <field name="kind">position</field>
+        <field name="consolidated" eval="True"/>
+        <field name="form_code">Mẫu số B 01 - DN/HN</field>
+        <field name="form_note">(Ban hành theo Thông tư số 202/2014/TT-BTC, sửa đổi bởi Thông tư số 43/2026/TT-BTC; mẫu theo Thông tư số 99/2025/TT-BTC)</field>
+        <field name="title">BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT</field>
+        <field name="check_expression">[280] - [440]</field>
+        <field name="check_message">Tổng tài sản (280) không bằng tổng nguồn vốn (440)</field>
+    </record>
+
+    <record id="b01hn_100" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">10</field>
+        <field name="code">100</field>
+        <field name="name">A - TÀI SẢN NGẮN HẠN</field>
+        <field name="formula">[110] + [120] + [130] + [140] + [150] + [160]</field>
+        <field name="level">0</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_110" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">20</field>
+        <field name="code">110</field>
+        <field name="name">I. Tiền và các khoản tương đương tiền</field>
+        <field name="formula">[111] + [112]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_111" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">30</field>
+        <field name="code">111</field>
+        <field name="name">1. Tiền</field>
+        <field name="formula">BAL(111, 112, 113)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_112" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">40</field>
+        <field name="code">112</field>
+        <field name="name">2. Các khoản tương đương tiền</field>
+        <field name="formula">BAL(12811, 12881)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_120" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">50</field>
+        <field name="code">120</field>
+        <field name="name">II. Đầu tư tài chính ngắn hạn</field>
+        <field name="formula">[121] + [122] + [123] + [124] + [125] + [126]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_121" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">60</field>
+        <field name="code">121</field>
+        <field name="name">1. Chứng khoán kinh doanh</field>
+        <field name="formula">BAL(121)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_122" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">70</field>
+        <field name="code">122</field>
+        <field name="name">2. Dự phòng giảm giá chứng khoán kinh doanh (*)</field>
+        <field name="formula">BAL(2291)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_123" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">80</field>
+        <field name="code">123</field>
+        <field name="name">3. Đầu tư nắm giữ đến ngày đáo hạn ngắn hạn</field>
+        <field name="formula">BAL(12812, 12822, 12831, 12882)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_124" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">90</field>
+        <field name="code">124</field>
+        <field name="name">4. Dự phòng đầu tư nắm giữ đến ngày đáo hạn ngắn hạn (*)</field>
+        <field name="formula"></field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_125" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">100</field>
+        <field name="code">125</field>
+        <field name="name">5. Đầu tư ngắn hạn khác</field>
+        <field name="formula">BAL(22811)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_126" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">110</field>
+        <field name="code">126</field>
+        <field name="name">6. Dự phòng tổn thất các khoản đầu tư ngắn hạn khác (*)</field>
+        <field name="formula">BAL(22921, 22922)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_130" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">120</field>
+        <field name="code">130</field>
+        <field name="name">III. Các khoản phải thu ngắn hạn</field>
+        <field name="formula">[131] + [132] + [134] + [135] + [136] + [137]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_131" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">130</field>
+        <field name="code">131</field>
+        <field name="name">1. Phải thu ngắn hạn của khách hàng</field>
+        <field name="formula">PDR(1311)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_132" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">140</field>
+        <field name="code">132</field>
+        <field name="name">2. Trả trước cho người bán ngắn hạn</field>
+        <field name="formula">PDR(3311)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_134" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">150</field>
+        <field name="code">134</field>
+        <field name="name">4. Phải thu theo tiến độ hợp đồng xây dựng</field>
+        <field name="formula">PDR(337)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_135" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">160</field>
+        <field name="code">135</field>
+        <field name="name">5. Phải thu ngắn hạn khác</field>
+        <field name="formula">PDR(13881, 1411, 2441, 3341, 33811, 33821, 33831, 33841, 33861, 33881, 3441, 332) + DR(3351) + BAL(13621, 13631, 13681)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_136" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">170</field>
+        <field name="code">136</field>
+        <field name="name">6. Dự phòng phải thu ngắn hạn khó đòi (*)</field>
+        <field name="formula">BAL(22931)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_137" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">180</field>
+        <field name="code">137</field>
+        <field name="name">7. Tài sản thiếu chờ xử lý</field>
+        <field name="formula">PDR(13811, 13812)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_140" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">190</field>
+        <field name="code">140</field>
+        <field name="name">IV. Hàng tồn kho</field>
+        <field name="formula">[141] + [142]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_141" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">200</field>
+        <field name="code">141</field>
+        <field name="name">1. Hàng tồn kho</field>
+        <field name="formula">BAL(151, 152, 1531, 1541, 155, 156, 157, 158)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_142" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">210</field>
+        <field name="code">142</field>
+        <field name="name">2. Dự phòng giảm giá hàng tồn kho (*)</field>
+        <field name="formula">BAL(22941)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_150" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">220</field>
+        <field name="code">150</field>
+        <field name="name">V. Tài sản sinh học ngắn hạn</field>
+        <field name="formula">[151] + [152] + [153]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_151" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">230</field>
+        <field name="code">151</field>
+        <field name="name">1. Súc vật nuôi lấy sản phẩm một lần ngắn hạn</field>
+        <field name="formula">BAL(21521)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_152" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">240</field>
+        <field name="code">152</field>
+        <field name="name">2. Cây trồng theo mùa vụ hoặc lấy sản phẩm một lần ngắn hạn</field>
+        <field name="formula">BAL(21531)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_153" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">250</field>
+        <field name="code">153</field>
+        <field name="name">3. Dự phòng tổn thất tài sản sinh học ngắn hạn (*)</field>
+        <field name="formula">BAL(22951)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_160" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">260</field>
+        <field name="code">160</field>
+        <field name="name">VI. Tài sản ngắn hạn khác</field>
+        <field name="formula">[161] + [162] + [163] + [164] + [165]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_161" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">270</field>
+        <field name="code">161</field>
+        <field name="name">1. Chi phí chờ phân bổ ngắn hạn</field>
+        <field name="formula">BAL(2421)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_162" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">280</field>
+        <field name="code">162</field>
+        <field name="name">2. Thuế GTGT được khấu trừ</field>
+        <field name="formula">BAL(133)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_163" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">290</field>
+        <field name="code">163</field>
+        <field name="name">3. Thuế và các khoản khác phải thu Nhà nước</field>
+        <field name="formula">PDR(13831, 13832) + DR(333)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_164" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">300</field>
+        <field name="code">164</field>
+        <field name="name">4. Giao dịch mua bán lại trái phiếu Chính phủ</field>
+        <field name="formula">DR(171)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_165" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">310</field>
+        <field name="code">165</field>
+        <field name="name">5. Tài sản ngắn hạn khác</field>
+        <field name="formula">BAL(22881)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_200" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">320</field>
+        <field name="code">200</field>
+        <field name="name">B - TÀI SẢN DÀI HẠN</field>
+        <field name="formula">[210] + [220] + [230] + [240] + [250] + [260] + [270]</field>
+        <field name="level">0</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_210" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">330</field>
+        <field name="code">210</field>
+        <field name="name">I. Các khoản phải thu dài hạn</field>
+        <field name="formula">[211] + [212] + [215] + [216]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_211" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">340</field>
+        <field name="code">211</field>
+        <field name="name">1. Phải thu dài hạn của khách hàng</field>
+        <field name="formula">PDR(1312)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_212" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">350</field>
+        <field name="code">212</field>
+        <field name="name">2. Trả trước cho người bán dài hạn</field>
+        <field name="formula">PDR(3312)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_215" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">360</field>
+        <field name="code">215</field>
+        <field name="name">5. Phải thu dài hạn khác</field>
+        <field name="formula">PDR(13882, 1412, 2442, 3342, 33812, 33822, 33832, 33842, 33862, 33882, 3442) + DR(3352) + BAL(1361, 13622, 13632, 13682)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_216" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">370</field>
+        <field name="code">216</field>
+        <field name="name">6. Dự phòng phải thu dài hạn khó đòi (*)</field>
+        <field name="formula">BAL(22932)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_220" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">380</field>
+        <field name="code">220</field>
+        <field name="name">II. Tài sản cố định</field>
+        <field name="formula">[221] + [224] + [227]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_221" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">390</field>
+        <field name="code">221</field>
+        <field name="name">1. Tài sản cố định hữu hình</field>
+        <field name="formula">[222] + [223]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_222" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">400</field>
+        <field name="code">222</field>
+        <field name="name">- Nguyên giá</field>
+        <field name="formula">BAL(211)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_223" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">410</field>
+        <field name="code">223</field>
+        <field name="name">- Giá trị hao mòn lũy kế (*)</field>
+        <field name="formula">BAL(2141)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_224" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">420</field>
+        <field name="code">224</field>
+        <field name="name">2. Tài sản cố định thuê tài chính</field>
+        <field name="formula">[225] + [226]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_225" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">430</field>
+        <field name="code">225</field>
+        <field name="name">- Nguyên giá</field>
+        <field name="formula">BAL(212)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_226" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">440</field>
+        <field name="code">226</field>
+        <field name="name">- Giá trị hao mòn lũy kế (*)</field>
+        <field name="formula">BAL(2142)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_227" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">450</field>
+        <field name="code">227</field>
+        <field name="name">3. Tài sản cố định vô hình</field>
+        <field name="formula">[228] + [229]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_228" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">460</field>
+        <field name="code">228</field>
+        <field name="name">- Nguyên giá</field>
+        <field name="formula">BAL(213)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_229" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">470</field>
+        <field name="code">229</field>
+        <field name="name">- Giá trị hao mòn lũy kế (*)</field>
+        <field name="formula">BAL(2143)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_230" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">480</field>
+        <field name="code">230</field>
+        <field name="name">III. Tài sản sinh học dài hạn</field>
+        <field name="formula">[231] + [236] + [237] + [238]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_231" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">490</field>
+        <field name="code">231</field>
+        <field name="name">1. Súc vật nuôi cho sản phẩm định kỳ</field>
+        <field name="formula">[232] + [233]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_232" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">500</field>
+        <field name="code">232</field>
+        <field name="name">a) Súc vật nuôi cho sản phẩm định kỳ chưa đến giai đoạn trưởng thành</field>
+        <field name="formula">BAL(21511)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_233" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">510</field>
+        <field name="code">233</field>
+        <field name="name">b) Súc vật nuôi cho sản phẩm định kỳ đến giai đoạn trưởng thành</field>
+        <field name="formula">[234] + [235]</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_234" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">520</field>
+        <field name="code">234</field>
+        <field name="name">- Nguyên giá</field>
+        <field name="formula">BAL(215121)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_235" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">530</field>
+        <field name="code">235</field>
+        <field name="name">- Giá trị khấu hao lũy kế (*)</field>
+        <field name="formula">BAL(215122)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_236" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">540</field>
+        <field name="code">236</field>
+        <field name="name">2. Súc vật nuôi lấy sản phẩm một lần dài hạn</field>
+        <field name="formula">BAL(21522)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_237" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">550</field>
+        <field name="code">237</field>
+        <field name="name">3. Cây trồng theo mùa vụ hoặc lấy sản phẩm một lần dài hạn</field>
+        <field name="formula">BAL(21532)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_238" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">560</field>
+        <field name="code">238</field>
+        <field name="name">4. Dự phòng tổn thất tài sản sinh học dài hạn (*)</field>
+        <field name="formula">BAL(22952)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_240" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">570</field>
+        <field name="code">240</field>
+        <field name="name">IV. Bất động sản đầu tư</field>
+        <field name="formula">[241] + [242]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_241" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">580</field>
+        <field name="code">241</field>
+        <field name="name">- Nguyên giá</field>
+        <field name="formula">BAL(217)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_242" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">590</field>
+        <field name="code">242</field>
+        <field name="name">- Giá trị hao mòn lũy kế (*)</field>
+        <field name="formula">BAL(2147)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_250" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">600</field>
+        <field name="code">250</field>
+        <field name="name">V. Tài sản dở dang dài hạn</field>
+        <field name="formula">[251] + [252]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_251" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">610</field>
+        <field name="code">251</field>
+        <field name="name">1. Chi phí sản xuất, kinh doanh dở dang dài hạn</field>
+        <field name="formula">BAL(1542, 22942)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_252" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">620</field>
+        <field name="code">252</field>
+        <field name="name">2. Chi phí xây dựng cơ bản dở dang</field>
+        <field name="formula">BAL(241)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_260" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">630</field>
+        <field name="code">260</field>
+        <field name="name">VI. Đầu tư tài chính dài hạn</field>
+        <field name="formula">[261] + [262] + [263] + [264] + [265] + [266]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_261" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">640</field>
+        <field name="code">261</field>
+        <field name="name">1. Đầu tư vào công ty con</field>
+        <field name="formula">BAL(221)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_262" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">650</field>
+        <field name="code">262</field>
+        <field name="name">2. Đầu tư vào công ty liên doanh, liên kết</field>
+        <field name="formula">BAL(222)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_263" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">660</field>
+        <field name="code">263</field>
+        <field name="name">3. Đầu tư góp vốn vào đơn vị khác</field>
+        <field name="formula">BAL(22812)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_264" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">670</field>
+        <field name="code">264</field>
+        <field name="name">4. Dự phòng tổn thất đầu tư vào đơn vị khác dài hạn (*)</field>
+        <field name="formula">BAL(22923)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_265" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">680</field>
+        <field name="code">265</field>
+        <field name="name">5. Đầu tư nắm giữ đến ngày đáo hạn dài hạn</field>
+        <field name="formula">BAL(12813, 12823, 12832, 12883)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_266" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">690</field>
+        <field name="code">266</field>
+        <field name="name">6. Dự phòng đầu tư nắm giữ đến ngày đáo hạn dài hạn (*)</field>
+        <field name="formula">BAL(22924)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_270" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">700</field>
+        <field name="code">270</field>
+        <field name="name">VII. Tài sản dài hạn khác</field>
+        <field name="formula">[271] + [272] + [273] + [274] + [279]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_271" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">710</field>
+        <field name="code">271</field>
+        <field name="name">1. Chi phí chờ phân bổ dài hạn</field>
+        <field name="formula">BAL(2422)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_272" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">720</field>
+        <field name="code">272</field>
+        <field name="name">2. Tài sản thuế thu nhập hoãn lại</field>
+        <field name="formula">BAL(243)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_273" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">730</field>
+        <field name="code">273</field>
+        <field name="name">3. Thiết bị, vật tư, phụ tùng thay thế dài hạn</field>
+        <field name="formula">BAL(1532, 22943)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_274" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">740</field>
+        <field name="code">274</field>
+        <field name="name">4. Tài sản dài hạn khác</field>
+        <field name="formula">BAL(22882)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_279" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">750</field>
+        <field name="code">279</field>
+        <field name="name">5. Lợi thế thương mại</field>
+        <field name="formula">BAL("HN_GW")</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_280" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">760</field>
+        <field name="code">280</field>
+        <field name="name">TỔNG CỘNG TÀI SẢN</field>
+        <field name="formula">[100] + [200]</field>
+        <field name="level">0</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_300" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">770</field>
+        <field name="code">300</field>
+        <field name="name">C - NỢ PHẢI TRẢ</field>
+        <field name="formula">[310] + [330]</field>
+        <field name="level">0</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_310" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">780</field>
+        <field name="code">310</field>
+        <field name="name">I. Nợ ngắn hạn</field>
+        <field name="formula">[311] + [312] + [313] + [314] + [315] + [316] + [318] + [319] + [320] + [321] + [322] + [323] + [324] + [325]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_311" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">790</field>
+        <field name="code">311</field>
+        <field name="name">1. Phải trả người bán ngắn hạn</field>
+        <field name="formula">PCR(3311)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_312" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">800</field>
+        <field name="code">312</field>
+        <field name="name">2. Người mua trả tiền trước ngắn hạn</field>
+        <field name="formula">PCR(1311)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_313" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">810</field>
+        <field name="code">313</field>
+        <field name="name">3. Phải trả cổ tức, lợi nhuận</field>
+        <field name="formula">PCR(332)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_314" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">820</field>
+        <field name="code">314</field>
+        <field name="name">4. Thuế và các khoản phải nộp Nhà nước ngắn hạn</field>
+        <field name="formula">CR(33311, 33312, 33321, 33331, 33341, 33351, 33361, 33371, 33381, 33382, 33391)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_315" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">830</field>
+        <field name="code">315</field>
+        <field name="name">5. Phải trả người lao động</field>
+        <field name="formula">PCR(3341)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_316" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">840</field>
+        <field name="code">316</field>
+        <field name="name">6. Chi phí phải trả ngắn hạn</field>
+        <field name="formula">CR(3351)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_318" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">850</field>
+        <field name="code">318</field>
+        <field name="name">8. Phải trả theo tiến độ hợp đồng xây dựng ngắn hạn</field>
+        <field name="formula">PCR(337)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_319" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">860</field>
+        <field name="code">319</field>
+        <field name="name">9. Doanh thu chờ phân bổ ngắn hạn</field>
+        <field name="formula">NBAL(33871)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_320" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">870</field>
+        <field name="code">320</field>
+        <field name="name">10. Phải trả ngắn hạn khác</field>
+        <field name="formula">PCR(13811, 13812, 13831, 13881, 1411, 2441, 33811, 33821, 33831, 33841, 33861, 33881, 3441) + NBAL(33621, 33631, 33681)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_321" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">880</field>
+        <field name="code">321</field>
+        <field name="name">11. Vay và nợ thuê tài chính ngắn hạn</field>
+        <field name="formula">NBAL(34111, 34121, 34311)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_322" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">890</field>
+        <field name="code">322</field>
+        <field name="name">12. Dự phòng phải trả ngắn hạn</field>
+        <field name="formula">NBAL(35211, 35221, 35231, 35251)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_323" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">900</field>
+        <field name="code">323</field>
+        <field name="name">13. Quỹ khen thưởng, phúc lợi</field>
+        <field name="formula">NBAL(353)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_324" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">910</field>
+        <field name="code">324</field>
+        <field name="name">14. Quỹ bình ổn giá</field>
+        <field name="formula">NBAL(357)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_325" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">920</field>
+        <field name="code">325</field>
+        <field name="name">15. Giao dịch mua bán lại trái phiếu Chính phủ</field>
+        <field name="formula">CR(171)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_330" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">930</field>
+        <field name="code">330</field>
+        <field name="name">II. Nợ dài hạn</field>
+        <field name="formula">[331] + [332] + [333] + [334] + [337] + [338] + [339] + [340] + [341] + [342] + [343] + [344]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_331" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">940</field>
+        <field name="code">331</field>
+        <field name="name">1. Phải trả người bán dài hạn</field>
+        <field name="formula">PCR(3312)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_332" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">950</field>
+        <field name="code">332</field>
+        <field name="name">2. Người mua trả tiền trước dài hạn</field>
+        <field name="formula">PCR(1312)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_333" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">960</field>
+        <field name="code">333</field>
+        <field name="name">3. Thuế và các khoản phải nộp Nhà nước dài hạn</field>
+        <field name="formula">CR(33322, 33332, 33342, 33352, 33362, 33372, 33392)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_334" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">970</field>
+        <field name="code">334</field>
+        <field name="name">4. Chi phí phải trả dài hạn</field>
+        <field name="formula">CR(3352)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_337" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">980</field>
+        <field name="code">337</field>
+        <field name="name">7. Doanh thu chờ phân bổ dài hạn</field>
+        <field name="formula">NBAL(33872)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_338" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">990</field>
+        <field name="code">338</field>
+        <field name="name">8. Phải trả dài hạn khác</field>
+        <field name="formula">PCR(13832, 13882, 1412, 2442, 3342, 33812, 33822, 33832, 33842, 33862, 33882, 3442) + NBAL(3361, 33622, 33632, 33682)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_339" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1000</field>
+        <field name="code">339</field>
+        <field name="name">9. Vay và nợ thuê tài chính dài hạn</field>
+        <field name="formula">NBAL(34112, 34122, 34312)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_340" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1010</field>
+        <field name="code">340</field>
+        <field name="name">10. Trái phiếu chuyển đổi</field>
+        <field name="formula">NBAL(3432)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_341" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1020</field>
+        <field name="code">341</field>
+        <field name="name">11. Cổ phiếu ưu đãi</field>
+        <field name="formula">NBAL(411121)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_342" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1030</field>
+        <field name="code">342</field>
+        <field name="name">12. Thuế thu nhập hoãn lại phải trả</field>
+        <field name="formula">NBAL(347)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_343" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1040</field>
+        <field name="code">343</field>
+        <field name="name">13. Dự phòng phải trả dài hạn</field>
+        <field name="formula">NBAL(35212, 35222, 35232, 35252)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_344" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1050</field>
+        <field name="code">344</field>
+        <field name="name">14. Quỹ phát triển khoa học và công nghệ</field>
+        <field name="formula">NBAL(356)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_400" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1060</field>
+        <field name="code">400</field>
+        <field name="name">D - VỐN CHỦ SỞ HỮU</field>
+        <field name="formula">[411] + [412] + [413] + [414] + [415] + [416] + [417] + [418] + [419] + [420] + [429]</field>
+        <field name="level">0</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b01hn_411" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1070</field>
+        <field name="code">411</field>
+        <field name="name">1. Vốn góp của chủ sở hữu</field>
+        <field name="formula">[411a] + [411b]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_411a" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1080</field>
+        <field name="code">411a</field>
+        <field name="name">- Cổ phiếu phổ thông có quyền biểu quyết</field>
+        <field name="formula">NBAL(41111)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_411b" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1090</field>
+        <field name="code">411b</field>
+        <field name="name">- Cổ phiếu ưu đãi</field>
+        <field name="formula">NBAL(411122)</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_412" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1100</field>
+        <field name="code">412</field>
+        <field name="name">2. Thặng dư vốn</field>
+        <field name="formula">NBAL(4112)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_413" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1110</field>
+        <field name="code">413</field>
+        <field name="name">3. Quyền chọn chuyển đổi trái phiếu</field>
+        <field name="formula">NBAL(4113)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_414" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1120</field>
+        <field name="code">414</field>
+        <field name="name">4. Vốn khác của chủ sở hữu</field>
+        <field name="formula">NBAL(4118)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_415" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1130</field>
+        <field name="code">415</field>
+        <field name="name">5. Cổ phiếu mua lại của chính mình (*)</field>
+        <field name="formula">NBAL(419)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_416" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1140</field>
+        <field name="code">416</field>
+        <field name="name">6. Chênh lệch đánh giá lại tài sản</field>
+        <field name="formula">NBAL(412)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_417" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1150</field>
+        <field name="code">417</field>
+        <field name="name">7. Chênh lệch tỷ giá hối đoái</field>
+        <field name="formula">NBAL(413)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_418" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1160</field>
+        <field name="code">418</field>
+        <field name="name">8. Quỹ đầu tư phát triển</field>
+        <field name="formula">NBAL(414)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_419" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1170</field>
+        <field name="code">419</field>
+        <field name="name">9. Quỹ khác thuộc vốn chủ sở hữu</field>
+        <field name="formula">NBAL(418)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_420" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1180</field>
+        <field name="code">420</field>
+        <field name="name">10. Lợi nhuận sau thuế chưa phân phối</field>
+        <field name="formula">[420a] + [420b]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_420a" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1190</field>
+        <field name="code">420a</field>
+        <field name="name">- LNST chưa phân phối lũy kế đến cuối kỳ trước</field>
+        <field name="formula">NBAL(4211, "HN_PREACQ") + PL_PRIOR()</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_420b" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1200</field>
+        <field name="code">420b</field>
+        <field name="name">- LNST chưa phân phối kỳ này</field>
+        <field name="formula">NBAL(4212) + PL_CUR()</field>
+        <field name="level">3</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_429" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1210</field>
+        <field name="code">429</field>
+        <field name="name">11. Lợi ích cổ đông không kiểm soát</field>
+        <field name="formula">NBAL("HN_NCI")</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b01hn_440" model="vn.report.line">
+        <field name="report_id" ref="report_b01_hn"/>
+        <field name="sequence">1220</field>
+        <field name="code">440</field>
+        <field name="name">TỔNG CỘNG NGUỒN VỐN</field>
+        <field name="formula">[300] + [400]</field>
+        <field name="level">0</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="report_b02_hn" model="vn.report">
+        <field name="name">B02-DN/HN Báo cáo kết quả hoạt động kinh doanh hợp nhất</field>
+        <field name="code">B02-DN/HN</field>
+        <field name="sequence">60</field>
+        <field name="kind">period</field>
+        <field name="consolidated" eval="True"/>
+        <field name="form_code">Mẫu số B 02 - DN/HN</field>
+        <field name="form_note">(Ban hành theo Thông tư số 202/2014/TT-BTC, sửa đổi bởi Thông tư số 43/2026/TT-BTC; mẫu theo Thông tư số 99/2025/TT-BTC)</field>
+        <field name="title">BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH HỢP NHẤT</field>
+    </record>
+
+    <record id="b02hn_01" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">10</field>
+        <field name="code">01</field>
+        <field name="name">1. Doanh thu bán hàng và cung cấp dịch vụ</field>
+        <field name="formula">CT(511) - CT(5117)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_02" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">20</field>
+        <field name="code">02</field>
+        <field name="name">2. Các khoản giảm trừ doanh thu</field>
+        <field name="formula">DT(511) - DT(5117) + BAL(521)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_10" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">30</field>
+        <field name="code">10</field>
+        <field name="name">3. Doanh thu thuần về bán hàng và cung cấp dịch vụ</field>
+        <field name="formula">[01] - [02]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_11" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">40</field>
+        <field name="code">11</field>
+        <field name="name">4. Giá vốn hàng bán</field>
+        <field name="formula">BAL(632) - BAL(6327)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_20" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">50</field>
+        <field name="code">20</field>
+        <field name="name">5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ</field>
+        <field name="formula">[10] - [11]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_21" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">60</field>
+        <field name="code">21</field>
+        <field name="name">6. Lãi/lỗ của hoạt động bán, thanh lý bất động sản đầu tư</field>
+        <field name="formula">NBAL(5117) - BAL(6327)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_22" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">70</field>
+        <field name="code">22</field>
+        <field name="name">7. Doanh thu hoạt động tài chính</field>
+        <field name="formula">NBAL(515)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_23" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">80</field>
+        <field name="code">23</field>
+        <field name="name">8. Chi phí tài chính</field>
+        <field name="formula">BAL(635)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_24" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">90</field>
+        <field name="code">24</field>
+        <field name="name">- Trong đó: Chi phí đi vay</field>
+        <field name="formula">BAL(6351)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_25" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">100</field>
+        <field name="code">25</field>
+        <field name="name">9. Chi phí bán hàng</field>
+        <field name="formula">BAL(641)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_26" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">110</field>
+        <field name="code">26</field>
+        <field name="name">10. Chi phí quản lý doanh nghiệp</field>
+        <field name="formula">BAL(642)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_27" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">120</field>
+        <field name="code">27</field>
+        <field name="name">11. Phần lãi hoặc lỗ trong công ty liên doanh, liên kết</field>
+        <field name="formula">NBAL("HN_EQPL")</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_30" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">130</field>
+        <field name="code">30</field>
+        <field name="name">11. Lợi nhuận thuần từ hoạt động kinh doanh</field>
+        <field name="formula">[20] + [21] + [22] - [23] - [25] - [26] + [27]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_31" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">140</field>
+        <field name="code">31</field>
+        <field name="name">12. Thu nhập khác</field>
+        <field name="formula">NBAL(711)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_32" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">150</field>
+        <field name="code">32</field>
+        <field name="name">13. Chi phí khác</field>
+        <field name="formula">BAL(811)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_40" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">160</field>
+        <field name="code">40</field>
+        <field name="name">14. Lợi nhuận khác</field>
+        <field name="formula">[31] - [32]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_50" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">170</field>
+        <field name="code">50</field>
+        <field name="name">15. Tổng lợi nhuận kế toán trước thuế</field>
+        <field name="formula">[30] + [40]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_51" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">180</field>
+        <field name="code">51</field>
+        <field name="name">16. Chi phí thuế TNDN hiện hành</field>
+        <field name="formula">BAL(8211)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_52" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">190</field>
+        <field name="code">52</field>
+        <field name="name">17. Chi phí thuế TNDN hoãn lại</field>
+        <field name="formula">BAL(8212)</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_60" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">200</field>
+        <field name="code">60</field>
+        <field name="name">18. Lợi nhuận sau thuế thu nhập doanh nghiệp</field>
+        <field name="formula">[50] - [51] - [52]</field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_61" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">210</field>
+        <field name="code">61</field>
+        <field name="name">- Lợi nhuận sau thuế của công ty mẹ</field>
+        <field name="formula">[60] - [62]</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_62" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">220</field>
+        <field name="code">62</field>
+        <field name="name">- Lợi nhuận sau thuế của cổ đông không kiểm soát</field>
+        <field name="formula">BAL("HN_PLNCI")</field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+
+    <record id="b02hn_70" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">230</field>
+        <field name="code">70</field>
+        <field name="name">19. Lãi cơ bản trên cổ phiếu (*)</field>
+        <field name="formula"></field>
+        <field name="level">1</field>
+        <field name="bold" eval="True"/>
+    </record>
+
+    <record id="b02hn_71" model="vn.report.line">
+        <field name="report_id" ref="report_b02_hn"/>
+        <field name="sequence">240</field>
+        <field name="code">71</field>
+        <field name="name">20. Lãi suy giảm trên cổ phiếu (*)</field>
+        <field name="formula"></field>
+        <field name="level">2</field>
+        <field name="bold" eval="False"/>
+    </record>
+</odoo>

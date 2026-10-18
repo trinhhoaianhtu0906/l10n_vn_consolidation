@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vn_consolidation_worksheet_view_form" model="ir.ui.view">
+        <field name="name">vn.consolidation.worksheet.form</field>
+        <field name="model">vn.consolidation.worksheet</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="group_id" options="{'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name="date"/>
+                        <field name="currency_id" invisible="1"/>
+                    </group>
+                </group>
+                <div class="alert alert-warning" role="alert" invisible="not warning_text">
+                    <field name="warning_text" nolabel="1"/>
+                </div>
+                <field name="computed" invisible="1"/>
+                <field name="line_ids" invisible="not computed" nolabel="1">
+                    <list create="0" delete="0">
+                        <field name="rule"/>
+                        <field name="company_id"/>
+                        <field name="code"/>
+                        <field name="partner_id" optional="show"/>
+                        <field name="debit" sum="Nợ"/>
+                        <field name="credit" sum="Có"/>
+                        <field name="currency_id" column_invisible="1"/>
+                    </list>
+                </field>
+                <footer>
+                    <button name="action_compute" type="object" string="Tính" class="btn-primary"/>
+                    <button special="cancel" string="Đóng"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="vn_consolidation_worksheet_action" model="ir.actions.act_window">
+        <field name="name">Bảng tính loại trừ</field>
+        <field name="res_model">vn.consolidation.worksheet</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

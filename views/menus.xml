@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_vn_consolidation_root"
+              name="Hợp nhất"
+              parent="l10n_vn_tt99_reports.menu_vn_tt99_root"
+              sequence="50"/>
+    <menuitem id="menu_vn_consolidation_report"
+              name="Xem báo cáo hợp nhất"
+              parent="menu_vn_consolidation_root"
+              action="vn_dynamic_report_action_consolidated"
+              sequence="10"/>
+    <menuitem id="menu_vn_consolidation_worksheet"
+              name="Bảng tính loại trừ"
+              parent="menu_vn_consolidation_root"
+              action="vn_consolidation_worksheet_action"
+              sequence="20"/>
+    <menuitem id="menu_vn_consolidation_group"
+              name="Nhóm hợp nhất"
+              parent="menu_vn_consolidation_root"
+              action="vn_consolidation_group_action"
+              sequence="30"/>
+</odoo>
