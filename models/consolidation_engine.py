@@ -18,7 +18,14 @@ from dateutil.relativedelta import relativedelta
 from odoo.exceptions import UserError
 from odoo.tools.translate import LazyTranslate
 
-from odoo.addons.l10n_vn_financial_statements.models.engine import LedgerProvider, Row, is_pl_code, with_companies
+from odoo.addons.l10n_vn_financial_statements.models.engine import (
+    LEDGER_IFRS,
+    LEDGER_VAS,
+    LedgerProvider,
+    Row,
+    is_pl_code,
+    with_companies,
+)
 
 # Pseudo account codes. Formulas match codes by prefix, so none of these may
 # start with another one.
@@ -46,7 +53,8 @@ def _row(code, amount, partner_id=False):
 
 
 class ConsolidationProvider:
-    def __init__(self, group, posted_only=True):
+    def __init__(self, group, posted_only=True, ledger=LEDGER_VAS):
+        self.ledger = ledger
         # Read every company of the group, even those not active in the company switcher.
         group_companies = (group.parent_company_id | group.sudo().member_ids.company_id).with_env(group.env)
         self.env = with_companies(group.env, group_companies)
@@ -76,9 +84,9 @@ class ConsolidationProvider:
         parent_companies = (
             self.env["res.company"].search([("id", "child_of", self.parent.id)]) - member_companies
         )
-        self.parent_ledger = LedgerProvider(self.env, parent_companies, posted_only)
+        self.parent_ledger = LedgerProvider(self.env, parent_companies, posted_only, ledger)
         self.ledgers = {
-            member.id: LedgerProvider(self.env, company_sets[member.id], posted_only)
+            member.id: LedgerProvider(self.env, company_sets[member.id], posted_only, ledger)
             for member in group.member_ids
         }
         self.full_members = group.member_ids.filtered(lambda m: m.method == "full")
@@ -143,16 +151,34 @@ class ConsolidationProvider:
                 equity[row.code] += row.credit - row.debit
         return profit, equity
 
-    def acquisition_equity(self, member):
-        """{code: credit-positive amount} of a subsidiary's equity at acquisition."""
-        if member.snapshot_line_ids:
-            return {line.code: line.amount for line in member.snapshot_line_ids}
+    def _ledger_equity(self, ledger, day):
+        """{code: credit-positive amount} of equity read from ``ledger`` up to ``day``."""
         totals = defaultdict(float)
-        for row in self.ledgers[member.id].rows(None, member.acquisition_date):
+        for row in ledger.rows(None, day):
             if is_pl_code(row.code):
                 totals[PREACQ] += row.credit - row.debit
             elif row.code.startswith("4"):
                 totals[row.code] += row.credit - row.debit
+        return totals
+
+    def acquisition_equity(self, member):
+        """{code: credit-positive amount} of a subsidiary's equity at acquisition.
+
+        The stored snapshot is the VAS equity. Under IFRS, the IFRS adjustments
+        booked up to the acquisition date change the net assets acquired, so
+        their effect is added to the snapshot (IFRS 3).
+        """
+        acquired = self.ledgers[member.id]
+        if member.snapshot_line_ids:
+            totals = defaultdict(float, {line.code: line.amount for line in member.snapshot_line_ids})
+            if self.ledger != LEDGER_VAS:
+                vas = LedgerProvider(self.env, acquired.companies, self.posted_only, LEDGER_VAS)
+                with_adjustments = self._ledger_equity(acquired, member.acquisition_date)
+                without = self._ledger_equity(vas, member.acquisition_date)
+                for code in set(with_adjustments) | set(without):
+                    totals[code] += with_adjustments[code] - without[code]
+        else:
+            totals = self._ledger_equity(acquired, member.acquisition_date)
         return {code: amount for code, amount in totals.items() if self.currency.round(amount)}
 
     def investment_cost(self, member):
@@ -234,6 +260,8 @@ class ConsolidationProvider:
         return entries
 
     def _goodwill_amortisation(self, member, day):
+        if self.ledger == LEDGER_IFRS:
+            return []  # IFRS 3 / IAS 36: goodwill is tested for impairment, not amortised
         goodwill = self._goodwill(member)
         if goodwill <= 0:
             return []

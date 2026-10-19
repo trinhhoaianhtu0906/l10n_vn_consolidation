@@ -21,7 +21,9 @@ class VnReportWizard(models.TransientModel):
         if self.report_id.consolidated:
             if not self.consolidation_group_id:
                 raise UserError(self.env._("Select a consolidation group for a consolidated statement."))
-            return self.consolidation_group_id._get_provider(posted_only=self.target_move == "posted")
+            return self.consolidation_group_id._get_provider(
+                posted_only=self.target_move == "posted", ledger=self.report_id.ledger or "vas"
+            )
         return super()._get_provider()
 
     @api.model

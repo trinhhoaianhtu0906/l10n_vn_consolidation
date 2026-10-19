@@ -9,13 +9,14 @@ class VnConsolidationWorksheet(models.TransientModel):
     group_id = fields.Many2one("vn.consolidation.group", string="Consolidation Group", required=True)
     currency_id = fields.Many2one(related="group_id.currency_id")
     date = fields.Date(string="Date", required=True, default=fields.Date.context_today)
+    ledger = fields.Selection([("vas", "VAS"), ("ifrs", "IFRS")], default="vas", required=True)
     line_ids = fields.One2many("vn.consolidation.worksheet.line", "worksheet_id", string="Eliminations")
     warning_text = fields.Text(string="Warnings", readonly=True)
     computed = fields.Boolean(readonly=True)
 
     def action_compute(self):
         self.ensure_one()
-        provider = self.group_id._get_provider()
+        provider = self.group_id._get_provider(ledger=self.ledger)
         commands = [fields.Command.clear()]
         Partner = self.env["res.partner"]
         for rule, member, row in provider.eliminations(self.date):

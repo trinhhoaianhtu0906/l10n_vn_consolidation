@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0-20261015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 03:48+0000\n"
-"PO-Revision-Date: 2026-10-19 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 05:12+0000\n"
+"PO-Revision-Date: 2026-10-19 05:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1040,6 +1040,11 @@ msgid "ID"
 msgstr ""
 
 #. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_worksheet__ledger__ifrs
+msgid "IFRS"
+msgstr ""
+
+#. module: l10n_vn_consolidation
 #: model:vn.report.line,name:l10n_vn_consolidation.b01hn_220
 msgid "II. Fixed assets"
 msgstr ""
@@ -1149,6 +1154,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__write_date
 #: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__write_date
 msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__ledger
+msgid "Ledger"
 msgstr ""
 
 #. module: l10n_vn_consolidation
@@ -1370,6 +1380,11 @@ msgstr ""
 #. module: l10n_vn_consolidation
 #: model:vn.report.line,name:l10n_vn_consolidation.b01hn_150
 msgid "V. Short-term biological assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_worksheet__ledger__vas
+msgid "VAS"
 msgstr ""
 
 #. module: l10n_vn_consolidation

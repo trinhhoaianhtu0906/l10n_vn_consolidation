@@ -41,9 +41,9 @@ class VnConsolidationGroup(models.Model):
             if group.parent_company_id in companies:
                 raise ValidationError(self.env._("The parent company cannot also be a member."))
 
-    def _get_provider(self, posted_only=True):
+    def _get_provider(self, posted_only=True, ledger="vas"):
         self.ensure_one()
-        return ConsolidationProvider(self, posted_only=posted_only)
+        return ConsolidationProvider(self, posted_only=posted_only, ledger=ledger)
 
     def action_open_worksheet(self):
         self.ensure_one()
