@@ -1,0 +1,1430 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_vn_consolidation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 03:48+0000\n"
+"PO-Revision-Date: 2026-10-19 03:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid ""
+"%(company)s uses %(currency)s, not the currency of the group. Translating "
+"foreign currency statements is not supported yet."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,form_note:l10n_vn_consolidation.report_b01_hn
+#: model:vn.report,form_note:l10n_vn_consolidation.report_b02_hn
+msgid ""
+"(Issued under Circular No. 202/2014/TT-BTC as amended by Circular No. "
+"43/2026/TT-BTC; forms of Circular No. 99/2025/TT-BTC)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_223
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_226
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_229
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_242
+msgid "- Accumulated depreciation (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_235
+msgid "- Accumulated depreciation of mature livestock (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_420a
+msgid "- Accumulated to the end of the previous period"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_62
+msgid "- Attributable to non-controlling interests"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_61
+msgid "- Attributable to the parent company"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_222
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_225
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_228
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_234
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_241
+msgid "- Cost"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_420b
+msgid "- Of the current period"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_24
+msgid "- Of which: borrowing costs"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_411a
+msgid "- Ordinary shares with voting rights"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_411b
+msgid "- Preference shares"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_111
+msgid "1. Cash"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_141
+msgid "1. Inventories"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_261
+msgid "1. Investments in subsidiaries"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_231
+msgid "1. Livestock producing periodic products"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_271
+msgid "1. Long-term deferred costs"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_331
+msgid "1. Long-term trade payables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_211
+msgid "1. Long-term trade receivables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_251
+msgid "1. Long-term work in progress"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_411
+msgid "1. Owners' contributed capital"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_01
+msgid "1. Revenue from sales of goods and services"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_161
+msgid "1. Short-term deferred costs"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_151
+msgid "1. Short-term livestock for one-time harvest"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_311
+msgid "1. Short-term trade payables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_131
+msgid "1. Short-term trade receivables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_221
+msgid "1. Tangible fixed assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_121
+msgid "1. Trading securities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_340
+msgid "10. Convertible bonds"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_26
+msgid "10. General and administrative expenses"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_320
+msgid "10. Other short-term payables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_420
+msgid "10. Undistributed profit after tax"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_429
+msgid "11. Non-controlling interests"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_30
+msgid "11. Operating profit"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_341
+msgid "11. Preference shares"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_27
+msgid "11. Share of profit or loss of joint ventures and associates"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_321
+msgid "11. Short-term borrowings and finance lease liabilities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_342
+msgid "12. Deferred tax liabilities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_31
+msgid "12. Other income"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_322
+msgid "12. Short-term provisions"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_323
+msgid "13. Bonus and welfare funds"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_343
+msgid "13. Long-term provisions"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_32
+msgid "13. Other expenses"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_40
+msgid "14. Other profit"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_324
+msgid "14. Price stabilisation fund"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_344
+msgid "14. Science and technology development fund"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_50
+msgid "15. Accounting profit before tax"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_325
+msgid "15. Government bond repurchase transactions"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_51
+msgid "16. Current corporate income tax expense"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_52
+msgid "17. Deferred corporate income tax expense"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_60
+msgid "18. Profit after corporate income tax"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_70
+msgid "19. Basic earnings per share (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_112
+msgid "2. Cash equivalents"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_252
+msgid "2. Construction in progress"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_162
+msgid "2. Deductible VAT"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_272
+msgid "2. Deferred tax assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_224
+msgid "2. Finance lease fixed assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_262
+msgid "2. Investments in joint ventures and associates"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_332
+msgid "2. Long-term advances from customers"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_236
+msgid "2. Long-term livestock for one-time harvest"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_212
+msgid "2. Long-term prepayments to suppliers"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_142
+msgid "2. Provision for decline in value of inventories (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_122
+msgid "2. Provision for diminution in value of trading securities (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_02
+msgid "2. Revenue deductions"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_412
+msgid "2. Share premium"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_312
+msgid "2. Short-term advances from customers"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_132
+msgid "2. Short-term prepayments to suppliers"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_152
+msgid "2. Short-term seasonal or one-time-harvest crops"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_71
+msgid "20. Diluted earnings per share (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_413
+msgid "3. Bond conversion options"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_313
+msgid "3. Dividends and profits payable"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_263
+msgid "3. Equity investments in other entities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_227
+msgid "3. Intangible fixed assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_273
+msgid "3. Long-term equipment, supplies and spare parts"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_237
+msgid "3. Long-term seasonal or one-time-harvest crops"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_333
+msgid "3. Long-term taxes and amounts payable to the State"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_10
+msgid "3. Net revenue from sales of goods and services"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_153
+msgid "3. Provision for losses on short-term biological assets (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_123
+msgid "3. Short-term held-to-maturity investments"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_163
+msgid "3. Taxes and other receivables from the State"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_11
+msgid "4. Cost of goods sold"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_164
+msgid "4. Government bond repurchase transactions"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_334
+msgid "4. Long-term accrued expenses"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_274
+msgid "4. Other non-current assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_414
+msgid "4. Other owners' capital"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_264
+msgid "4. Provision for long-term investment losses (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_238
+msgid "4. Provision for losses on long-term biological assets (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_124
+msgid "4. Provision for short-term held-to-maturity investments (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_134
+msgid "4. Receivables under construction contracts"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_314
+msgid "4. Short-term taxes and amounts payable to the State"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_279
+msgid "5. Goodwill"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_20
+msgid "5. Gross profit from sales of goods and services"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_265
+msgid "5. Long-term held-to-maturity investments"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_165
+msgid "5. Other current assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_215
+msgid "5. Other long-term receivables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_125
+msgid "5. Other short-term investments"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_135
+msgid "5. Other short-term receivables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_315
+msgid "5. Payables to employees"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_415
+msgid "5. Treasury shares (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_416
+msgid "6. Asset revaluation differences"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_21
+msgid "6. Gain or loss on sale and disposal of investment property"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_216
+msgid "6. Provision for long-term doubtful debts (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_266
+msgid "6. Provision for long-term held-to-maturity investments (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_126
+msgid "6. Provision for losses on other short-term investments (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_136
+msgid "6. Provision for short-term doubtful debts (*)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_316
+msgid "6. Short-term accrued expenses"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_22
+msgid "7. Financial income"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_417
+msgid "7. Foreign exchange differences"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_337
+msgid "7. Long-term deferred revenue"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_137
+msgid "7. Shortage of assets awaiting resolution"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_418
+msgid "8. Development investment fund"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_23
+msgid "8. Financial expenses"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_338
+msgid "8. Other long-term payables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_318
+msgid "8. Short-term payables under construction contracts"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_339
+msgid "9. Long-term borrowings and finance lease liabilities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_419
+msgid "9. Other equity funds"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_25
+msgid "9. Selling expenses"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_319
+msgid "9. Short-term deferred revenue"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_100
+msgid "A - CURRENT ASSETS"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "A company can only be a member of a group once."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__code
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__code
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__code
+msgid "Account"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__code
+msgid "Account code, or HN_GW, HN_NCI, HN_PLNCI, HN_EQPL."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__acquisition_date
+msgid "Acquisition Date"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__adjustment_id
+msgid "Adjustment"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "Adjustment %s is not balanced."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__adjustment_ids
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Adjustments"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_adjustment__state__confirmed
+msgid "Applied"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_adjustment__date
+msgid "Applies to every statement at this date or later."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Apply"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__kind
+msgid "Asset Type"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_member__method__equity
+msgid "Associate or joint venture (equity method)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_200
+msgid "B - NON-CURRENT ASSETS"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,name:l10n_vn_consolidation.report_b01_hn
+msgid "B01-DN/HN Consolidated Statement of Financial Position"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,name:l10n_vn_consolidation.report_b02_hn
+msgid "B02-DN/HN Consolidated Income Statement"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__buyer_company_id
+msgid "Buyer"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_300
+msgid "C - LIABILITIES"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,title:l10n_vn_consolidation.report_b02_hn
+msgid "CONSOLIDATED INCOME STATEMENT"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,title:l10n_vn_consolidation.report_b01_hn
+msgid "CONSOLIDATED STATEMENT OF FINANCIAL POSITION"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Close"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Compute"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__computed
+msgid "Computed"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+#: model:ir.actions.client,name:l10n_vn_consolidation.vn_dynamic_report_action_consolidated
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_report
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Consolidated Statements"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_root
+msgid "Consolidation"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__group_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__consolidation_group_id
+msgid "Consolidation Group"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.actions.act_window,name:l10n_vn_consolidation.vn_consolidation_group_action
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_group
+msgid "Consolidation Groups"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_worksheet
+msgid "Consolidation elimination worksheet"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_worksheet_line
+msgid "Consolidation elimination worksheet line"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_group
+msgid "Consolidation group"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_member
+msgid "Consolidation group member"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__cit_rate
+msgid "Corporate Income Tax Rate (%)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.actions.act_window,help:l10n_vn_consolidation.vn_consolidation_group_action
+msgid "Create your first consolidation group"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__credit
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__credit
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Credit"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__amount
+msgid "Credit Balance"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_400
+msgid "D - OWNERS' EQUITY"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__date
+msgid "Date"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__acquisition_date
+msgid "Date control or significant influence was obtained."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__debit
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__debit
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Debit"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__name
+msgid "Description"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Dividends from associate"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_adjustment__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__date
+msgid "Effective Date"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__rule
+msgid "Elimination"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+#: code:addons/l10n_vn_consolidation/wizard/vn_consolidation_worksheet.py:0
+#: model:ir.actions.act_window,name:l10n_vn_consolidation.vn_consolidation_worksheet_action
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_worksheet
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Elimination Worksheet"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__line_ids
+msgid "Eliminations"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__snapshot_line_ids
+msgid "Empty: read from the subsidiary's ledger at the acquisition date."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__investment_cost
+msgid ""
+"Empty: the balance of account 221 (or 222) of the parent company for this "
+"company as partner, at the acquisition date."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__code
+msgid ""
+"Equity account code (4xxx). HN_PREACQ: unclosed profit or loss earned before"
+" the acquisition."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__snapshot_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Equity at Acquisition"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Equity method"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_snapshot_line
+msgid "Equity of a subsidiary at acquisition"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_unrealized__kind__fixed_asset
+msgid "Fixed Asset"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,form_code:l10n_vn_consolidation.report_b01_hn
+msgid "Form B 01 - DN/HN"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,form_code:l10n_vn_consolidation.report_b02_hn
+msgid "Form B 02 - DN/HN"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Gain on bargain purchase"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__goodwill_years
+msgid "Goodwill Amortisation (Years)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Goodwill amortisation"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "Goodwill is amortised over 1 to 10 years."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__group_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__group_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__group_id
+msgid "Group"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_110
+msgid "I. Cash and cash equivalents"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_310
+msgid "I. Current liabilities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_210
+msgid "I. Long-term receivables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_220
+msgid "II. Fixed assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_330
+msgid "II. Non-current liabilities"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_120
+msgid "II. Short-term financial investments"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_230
+msgid "III. Long-term biological assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_130
+msgid "III. Short-term receivables"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_140
+msgid "IV. Inventories"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_240
+msgid "IV. Investment property"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__ownership_pct
+msgid "Interest of the parent company, direct and indirect."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group balance difference"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid ""
+"Intra-group balances between %(first)s and %(second)s differ by "
+"%(difference)s at %(date)s; the difference is held in 1388/3388."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group balances eliminated"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group dividends eliminated"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group revenue and expenses eliminated"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_unrealized__kind__inventory
+msgid "Inventory"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__investment_cost
+msgid "Investment Cost"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Investment in subsidiary eliminated"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_adjustment
+msgid "Manual consolidation adjustment"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_adjustment_line
+msgid "Manual consolidation adjustment line"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__member_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__company_id
+msgid "Member"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__member_ids
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Members"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__method
+msgid "Method"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid ""
+"No cost found for the investment in %(company)s: account 221 of the parent "
+"company has no balance for this partner. Enter the cost on the group member."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Non-controlling interest"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__note
+msgid "Note"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Notes"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__ownership_pct
+msgid "Ownership (%)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.constraint,message:l10n_vn_consolidation.constraint_vn_consolidation_member_pct_check
+msgid "Ownership must be above 0 and at most 100%."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__parent_company_id
+msgid "Parent Company"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__partner_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__goods_value
+msgid "Remaining Intra-group Assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_unrealized__amount
+msgid "Remaining value x gross margin; can be edited."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__report_id
+msgid "Report"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_unrealized__date
+msgid "Reporting date of the consolidated statements (period end)."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Reset to Draft"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/wizard/vn_report_wizard.py:0
+msgid "Select a consolidation group for a consolidated statement."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__seller_company_id
+msgid "Seller"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__margin_pct
+msgid "Seller Gross Margin (%)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.actions.act_window,help:l10n_vn_consolidation.vn_consolidation_group_action
+msgid ""
+"Set the parent company, the subsidiaries and associates, the ownership and "
+"the acquisition dates."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__state
+msgid "Status"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_group__goodwill_years
+msgid "Straight line, at most 10 years under Circular 202/2014/TT-BTC."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_member__method__full
+msgid "Subsidiary (full consolidation)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_280
+msgid "TOTAL ASSETS"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_440
+msgid "TOTAL LIABILITIES AND EQUITY"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Take Balances at Acquisition"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__tax_rate
+msgid "Tax Rate (%)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "The consolidated cash flow statement is not supported yet."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "The parent company cannot also be a member."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Total"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,check_message:l10n_vn_consolidation.report_b01_hn
+msgid "Total assets (280) differ from total liabilities and equity (440)"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__unrealized_ids
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__amount
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Unrealised Profit"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_unrealized
+msgid "Unrealised intra-group profit at a reporting date"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Unrealised profit"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Unrealised profit - non-controlling interest"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_250
+msgid "V. Long-term assets in progress"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_150
+msgid "V. Short-term biological assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_260
+msgid "VI. Long-term financial investments"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_160
+msgid "VI. Other current assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_270
+msgid "VII. Other non-current assets"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_unrealized__goods_value
+msgid "Value at the buyer's purchase price still held at the reporting date."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_report_wizard
+msgid "Vietnamese financial statement wizard"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__warning_text
+msgid "Warnings"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid ""
+"When empty, it is read from the subsidiary's ledger at the acquisition date.\n"
+"                                        Click \"Take Balances at Acquisition\" to store it, review it and adjust it (e.g. fair value differences)."
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__worksheet_id
+msgid "Worksheet"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_232
+msgid "a) Immature livestock producing periodic products"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_233
+msgid "b) Mature livestock producing periodic products"
+msgstr ""
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "e.g. ABC Group"
+msgstr ""

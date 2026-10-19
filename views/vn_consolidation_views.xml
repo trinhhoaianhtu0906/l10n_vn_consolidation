@@ -18,12 +18,12 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_open_report" type="object" string="Lập báo cáo hợp nhất" class="btn-primary"/>
-                    <button name="action_open_worksheet" type="object" string="Bảng tính loại trừ"/>
+                    <button name="action_open_report" type="object" string="Consolidated Statements" class="btn-primary"/>
+                    <button name="action_open_worksheet" type="object" string="Elimination Worksheet"/>
                 </header>
                 <sheet>
                     <div class="oe_title">
-                        <h1><field name="name" placeholder="Ví dụ: Tập đoàn ABC"/></h1>
+                        <h1><field name="name" placeholder="e.g. ABC Group"/></h1>
                     </div>
                     <group>
                         <group>
@@ -37,7 +37,7 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Thành viên" name="members">
+                        <page string="Members" name="members">
                             <field name="member_ids">
                                 <list>
                                     <field name="company_id"/>
@@ -60,24 +60,24 @@
                                             <field name="currency_id" invisible="1"/>
                                         </group>
                                     </group>
-                                    <separator string="Vốn chủ sở hữu tại ngày mua" invisible="method != 'full'"/>
+                                    <separator string="Equity at Acquisition" invisible="method != 'full'"/>
                                     <div invisible="method != 'full'" class="text-muted mb-2">
-                                        Để trống thì hệ thống tự lấy từ sổ của công ty con tại ngày mua.
-                                        Bấm "Lấy số dư" để lưu lại, kiểm tra và điều chỉnh (ví dụ chênh lệch đánh giá lại theo giá trị hợp lý).
+                                        When empty, it is read from the subsidiary's ledger at the acquisition date.
+                                        Click "Take Balances at Acquisition" to store it, review it and adjust it (e.g. fair value differences).
                                     </div>
-                                    <button name="action_take_snapshot" type="object" string="Lấy số dư tại ngày mua"
+                                    <button name="action_take_snapshot" type="object" string="Take Balances at Acquisition"
                                             class="btn-secondary mb-2" invisible="method != 'full' or not id"/>
                                     <field name="snapshot_line_ids" invisible="method != 'full'">
                                         <list editable="bottom">
                                             <field name="code"/>
-                                            <field name="amount" sum="Tổng"/>
+                                            <field name="amount" sum="Total"/>
                                             <field name="currency_id" column_invisible="1"/>
                                         </list>
                                     </field>
                                 </form>
                             </field>
                         </page>
-                        <page string="Lãi chưa thực hiện" name="unrealized">
+                        <page string="Unrealised Profit" name="unrealized">
                             <field name="unrealized_ids">
                                 <list editable="bottom">
                                     <field name="date"/>
@@ -92,7 +92,7 @@
                                 </list>
                             </field>
                         </page>
-                        <page string="Bút toán điều chỉnh" name="adjustments">
+                        <page string="Adjustments" name="adjustments">
                             <field name="adjustment_ids">
                                 <list>
                                     <field name="date"/>
@@ -101,8 +101,8 @@
                                 </list>
                                 <form>
                                     <header>
-                                        <button name="action_confirm" type="object" string="Áp dụng" class="btn-primary" invisible="state == 'confirmed'"/>
-                                        <button name="action_draft" type="object" string="Về nháp" invisible="state == 'draft'"/>
+                                        <button name="action_confirm" type="object" string="Apply" class="btn-primary" invisible="state == 'confirmed'"/>
+                                        <button name="action_draft" type="object" string="Reset to Draft" invisible="state == 'draft'"/>
                                         <field name="state" widget="statusbar"/>
                                     </header>
                                     <group>
@@ -113,15 +113,15 @@
                                         <list editable="bottom">
                                             <field name="code"/>
                                             <field name="partner_id"/>
-                                            <field name="debit" sum="Nợ"/>
-                                            <field name="credit" sum="Có"/>
+                                            <field name="debit" sum="Debit"/>
+                                            <field name="credit" sum="Credit"/>
                                             <field name="currency_id" column_invisible="1"/>
                                         </list>
                                     </field>
                                 </form>
                             </field>
                         </page>
-                        <page string="Ghi chú" name="note">
+                        <page string="Notes" name="note">
                             <field name="note"/>
                         </page>
                     </notebook>
@@ -131,12 +131,12 @@
     </record>
 
     <record id="vn_consolidation_group_action" model="ir.actions.act_window">
-        <field name="name">Nhóm hợp nhất</field>
+        <field name="name">Consolidation Groups</field>
         <field name="res_model">vn.consolidation.group</field>
         <field name="view_mode">list,form</field>
         <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">Tạo nhóm hợp nhất đầu tiên</p>
-            <p>Khai báo công ty mẹ, các công ty con và công ty liên kết, tỷ lệ lợi ích và ngày mua.</p>
+            <p class="o_view_nocontent_smiling_face">Create your first consolidation group</p>
+            <p>Set the parent company, the subsidiaries and associates, the ownership and the acquisition dates.</p>
         </field>
     </record>
 </odoo>

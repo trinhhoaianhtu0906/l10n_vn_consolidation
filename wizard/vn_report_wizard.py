@@ -1,14 +1,14 @@
 from odoo import api, fields, models
 from odoo.exceptions import UserError
 
-from odoo.addons.l10n_vn_tt99_reports.models.engine import with_companies
+from odoo.addons.l10n_vn_financial_statements.models.engine import with_companies
 
 
 class VnReportWizard(models.TransientModel):
     _inherit = "vn.report.wizard"
 
     report_id = fields.Many2one(domain="[('consolidated', '=', consolidation_group_id != False)]")
-    consolidation_group_id = fields.Many2one("vn.consolidation.group", string="Nhóm hợp nhất")
+    consolidation_group_id = fields.Many2one("vn.consolidation.group", string="Consolidation Group")
 
     @api.onchange("consolidation_group_id")
     def _onchange_consolidation_group_id(self):
@@ -20,7 +20,7 @@ class VnReportWizard(models.TransientModel):
     def _get_provider(self):
         if self.report_id.consolidated:
             if not self.consolidation_group_id:
-                raise UserError(self.env._("Báo cáo hợp nhất cần chọn nhóm hợp nhất."))
+                raise UserError(self.env._("Select a consolidation group for a consolidated statement."))
             return self.consolidation_group_id._get_provider(posted_only=self.target_move == "posted")
         return super()._get_provider()
 

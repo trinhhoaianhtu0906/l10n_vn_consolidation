@@ -12,34 +12,34 @@ class VnConsolidationGroup(models.Model):
     name = fields.Char(required=True)
     active = fields.Boolean(default=True)
     parent_company_id = fields.Many2one(
-        "res.company", string="Công ty mẹ", required=True, default=lambda self: self.env.company
+        "res.company", string="Parent Company", required=True, default=lambda self: self.env.company
     )
     currency_id = fields.Many2one(related="parent_company_id.currency_id")
-    member_ids = fields.One2many("vn.consolidation.member", "group_id", string="Thành viên")
+    member_ids = fields.One2many("vn.consolidation.member", "group_id", string="Members")
     goodwill_years = fields.Integer(
-        string="Số năm phân bổ lợi thế thương mại",
+        string="Goodwill Amortisation (Years)",
         default=10,
-        help="Phân bổ đều, tối đa 10 năm theo Thông tư 202/2014/TT-BTC.",
+        help="Straight line, at most 10 years under Circular 202/2014/TT-BTC.",
     )
-    cit_rate = fields.Float(string="Thuế suất TNDN (%)", default=20.0)
-    unrealized_ids = fields.One2many("vn.consolidation.unrealized", "group_id", string="Lãi chưa thực hiện")
-    adjustment_ids = fields.One2many("vn.consolidation.adjustment", "group_id", string="Bút toán điều chỉnh")
+    cit_rate = fields.Float(string="Corporate Income Tax Rate (%)", default=20.0)
+    unrealized_ids = fields.One2many("vn.consolidation.unrealized", "group_id", string="Unrealised Profit")
+    adjustment_ids = fields.One2many("vn.consolidation.adjustment", "group_id", string="Adjustments")
     note = fields.Html()
 
     @api.constrains("goodwill_years")
     def _check_goodwill_years(self):
         for group in self:
             if not 1 <= group.goodwill_years <= 10:
-                raise ValidationError(self.env._("Thời gian phân bổ lợi thế thương mại từ 1 đến 10 năm."))
+                raise ValidationError(self.env._("Goodwill is amortised over 1 to 10 years."))
 
     @api.constrains("parent_company_id", "member_ids")
     def _check_members(self):
         for group in self:
             companies = group.member_ids.company_id
             if len(companies) != len(group.member_ids):
-                raise ValidationError(self.env._("Một công ty chỉ được khai báo một lần trong nhóm."))
+                raise ValidationError(self.env._("A company can only be a member of a group once."))
             if group.parent_company_id in companies:
-                raise ValidationError(self.env._("Công ty mẹ không được khai báo là thành viên."))
+                raise ValidationError(self.env._("The parent company cannot also be a member."))
 
     def _get_provider(self, posted_only=True):
         self.ensure_one()
@@ -49,7 +49,7 @@ class VnConsolidationGroup(models.Model):
         self.ensure_one()
         return {
             "type": "ir.actions.act_window",
-            "name": self.env._("Bảng tính loại trừ"),
+            "name": self.env._("Elimination Worksheet"),
             "res_model": "vn.consolidation.worksheet",
             "view_mode": "form",
             "target": "new",
@@ -60,11 +60,11 @@ class VnConsolidationGroup(models.Model):
         self.ensure_one()
         return {
             "type": "ir.actions.client",
-            "name": self.env._("Báo cáo hợp nhất"),
-            "tag": "l10n_vn_tt99_reports.dynamic_report",
+            "name": self.env._("Consolidated Statements"),
+            "tag": "l10n_vn_financial_statements.dynamic_report",
             "context": {
                 "default_consolidation_group_id": self.id,
-                "default_report_id": self.env.ref("l10n_vn_tt99_consolidation.report_b01_hn").id,
+                "default_report_id": self.env.ref("l10n_vn_consolidation.report_b01_hn").id,
             },
         }
 
@@ -75,39 +75,39 @@ class VnConsolidationMember(models.Model):
     _order = "group_id, method, company_id"
 
     group_id = fields.Many2one("vn.consolidation.group", required=True, ondelete="cascade", index=True)
-    company_id = fields.Many2one("res.company", string="Công ty", required=True)
+    company_id = fields.Many2one("res.company", string="Company", required=True)
     currency_id = fields.Many2one(related="group_id.currency_id")
     method = fields.Selection(
         [
-            ("full", "Công ty con (hợp nhất toàn bộ)"),
-            ("equity", "Liên doanh, liên kết (vốn chủ sở hữu)"),
+            ("full", "Subsidiary (full consolidation)"),
+            ("equity", "Associate or joint venture (equity method)"),
         ],
-        string="Phương pháp",
+        string="Method",
         required=True,
         default="full",
     )
     ownership_pct = fields.Float(
-        string="Tỷ lệ lợi ích (%)",
+        string="Ownership (%)",
         required=True,
         default=100.0,
-        help="Tỷ lệ lợi ích của công ty mẹ, kể cả gián tiếp.",
+        help="Interest of the parent company, direct and indirect.",
     )
-    acquisition_date = fields.Date(string="Ngày nắm quyền kiểm soát / ảnh hưởng", required=True)
+    acquisition_date = fields.Date(string="Acquisition Date", required=True, help="Date control or significant influence was obtained.")
     investment_cost = fields.Monetary(
-        string="Giá gốc khoản đầu tư",
-        help="Để trống: lấy số dư TK 221 (hoặc 222) của công ty mẹ, chi tiết theo đối tượng là công ty này,"
-        " tại ngày mua.",
+        string="Investment Cost",
+        help="Empty: the balance of account 221 (or 222) of the parent company for this company as partner,"
+        " at the acquisition date.",
     )
     snapshot_line_ids = fields.One2many(
         "vn.consolidation.snapshot.line",
         "member_id",
-        string="Vốn chủ sở hữu tại ngày mua",
-        help="Để trống: tự lấy từ sổ của công ty con tại ngày mua.",
+        string="Equity at Acquisition",
+        help="Empty: read from the subsidiary's ledger at the acquisition date.",
     )
 
     _pct_check = models.Constraint(
         "CHECK(ownership_pct > 0 AND ownership_pct <= 100)",
-        "Tỷ lệ lợi ích phải lớn hơn 0 và không quá 100%.",
+        "Ownership must be above 0 and at most 100%.",
     )
 
     def action_take_snapshot(self):
@@ -130,11 +130,11 @@ class VnConsolidationSnapshotLine(models.Model):
     member_id = fields.Many2one("vn.consolidation.member", required=True, ondelete="cascade", index=True)
     currency_id = fields.Many2one(related="member_id.currency_id")
     code = fields.Char(
-        string="Tài khoản",
+        string="Account",
         required=True,
-        help="Mã tài khoản vốn chủ sở hữu (4xxx). HN_PREACQ: lãi lỗ trước ngày mua chưa kết chuyển.",
+        help="Equity account code (4xxx). HN_PREACQ: unclosed profit or loss earned before the acquisition.",
     )
-    amount = fields.Monetary(string="Số dư Có", required=True)
+    amount = fields.Monetary(string="Credit Balance", required=True)
 
 
 class VnConsolidationUnrealized(models.Model):
@@ -144,28 +144,28 @@ class VnConsolidationUnrealized(models.Model):
 
     group_id = fields.Many2one("vn.consolidation.group", required=True, ondelete="cascade", index=True)
     currency_id = fields.Many2one(related="group_id.currency_id")
-    date = fields.Date(string="Tại ngày", required=True, help="Ngày lập báo cáo hợp nhất (cuối kỳ).")
-    seller_company_id = fields.Many2one("res.company", string="Bên bán", required=True)
-    buyer_company_id = fields.Many2one("res.company", string="Bên mua", required=True)
+    date = fields.Date(string="Date", required=True, help="Reporting date of the consolidated statements (period end).")
+    seller_company_id = fields.Many2one("res.company", string="Seller", required=True)
+    buyer_company_id = fields.Many2one("res.company", string="Buyer", required=True)
     kind = fields.Selection(
-        [("inventory", "Hàng tồn kho"), ("fixed_asset", "Tài sản cố định")],
-        string="Loại tài sản",
+        [("inventory", "Inventory"), ("fixed_asset", "Fixed Asset")],
+        string="Asset Type",
         required=True,
         default="inventory",
     )
     goods_value = fields.Monetary(
-        string="Giá trị tài sản nội bộ còn lại", help="Giá trị theo giá mua của bên mua, còn tồn tại ngày lập báo cáo."
+        string="Remaining Intra-group Assets", help="Value at the buyer's purchase price still held at the reporting date."
     )
-    margin_pct = fields.Float(string="Tỷ suất lãi gộp bên bán (%)")
+    margin_pct = fields.Float(string="Seller Gross Margin (%)")
     amount = fields.Monetary(
-        string="Lãi chưa thực hiện",
+        string="Unrealised Profit",
         compute="_compute_amount",
         store=True,
         readonly=False,
-        help="Tự tính = giá trị còn lại x tỷ suất lãi gộp; có thể sửa tay.",
+        help="Remaining value x gross margin; can be edited."
     )
     tax_rate = fields.Float(
-        string="Thuế suất TNDN (%)",
+        string="Tax Rate (%)",
         compute="_compute_tax_rate",
         store=True,
         readonly=False,
@@ -188,19 +188,19 @@ class VnConsolidationAdjustment(models.Model):
     _order = "date desc, id desc"
 
     group_id = fields.Many2one("vn.consolidation.group", required=True, ondelete="cascade", index=True)
-    name = fields.Char(string="Diễn giải", required=True)
-    date = fields.Date(string="Ngày hiệu lực", required=True, help="Áp dụng cho mọi báo cáo lập từ ngày này trở đi.")
+    name = fields.Char(string="Description", required=True)
+    date = fields.Date(string="Effective Date", required=True, help="Applies to every statement at this date or later.")
     state = fields.Selection(
-        [("draft", "Nháp"), ("confirmed", "Áp dụng")], default="draft", required=True, string="Trạng thái"
+        [("draft", "Draft"), ("confirmed", "Applied")], default="draft", required=True, string="Status"
     )
-    line_ids = fields.One2many("vn.consolidation.adjustment.line", "adjustment_id", string="Dòng")
+    line_ids = fields.One2many("vn.consolidation.adjustment.line", "adjustment_id", string="Lines")
 
     def action_confirm(self):
         for adjustment in self:
             debit = sum(adjustment.line_ids.mapped("debit"))
             credit = sum(adjustment.line_ids.mapped("credit"))
             if adjustment.group_id.currency_id.compare_amounts(debit, credit):
-                raise ValidationError(self.env._("Bút toán điều chỉnh %s chưa cân Nợ - Có.", adjustment.name))
+                raise ValidationError(self.env._("Adjustment %s is not balanced.", adjustment.name))
         self.state = "confirmed"
 
     def action_draft(self):
@@ -213,7 +213,7 @@ class VnConsolidationAdjustmentLine(models.Model):
 
     adjustment_id = fields.Many2one("vn.consolidation.adjustment", required=True, ondelete="cascade", index=True)
     currency_id = fields.Many2one(related="adjustment_id.group_id.currency_id")
-    code = fields.Char(string="Tài khoản", required=True, help="Mã tài khoản, hoặc HN_GW, HN_NCI, HN_PLNCI, HN_EQPL.")
-    partner_id = fields.Many2one("res.partner", string="Đối tượng")
-    debit = fields.Monetary(string="Nợ")
-    credit = fields.Monetary(string="Có")
+    code = fields.Char(string="Account", required=True, help="Account code, or HN_GW, HN_NCI, HN_PLNCI, HN_EQPL.")
+    partner_id = fields.Many2one("res.partner", string="Partner")
+    debit = fields.Monetary(string="Debit")
+    credit = fields.Monetary(string="Credit")

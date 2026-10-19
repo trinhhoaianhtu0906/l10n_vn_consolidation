@@ -2,7 +2,7 @@ from datetime import date
 
 from odoo.tests import TransactionCase, tagged
 
-from odoo.addons.l10n_vn_tt99_reports.models.engine import evaluate_report
+from odoo.addons.l10n_vn_financial_statements.models.engine import evaluate_report
 
 from ..models.consolidation_engine import EQUITY_PL, GOODWILL, NCI, NCI_PL, PREACQ
 
@@ -103,7 +103,7 @@ class TestConsolidation(TransactionCase):
         return move
 
     def _run(self, xmlid, group=None):
-        report = self.env.ref(f"l10n_vn_tt99_consolidation.{xmlid}")
+        report = self.env.ref(f"l10n_vn_consolidation.{xmlid}")
         provider = (group or self.group)._get_provider()
         result = evaluate_report(report, provider, YEAR_START, YEAR_END)
         values = {item["line"].code: item["value"] for item in result["lines"]}
@@ -210,7 +210,7 @@ class TestConsolidation(TransactionCase):
     def test_intra_group_mismatch_warning(self):
         self._post(self.parent, date(2026, 9, 1), [("1311", 10, self.s_partner), ("711", -10, self.s_partner)])
         b01, _o, warnings = self._run("report_b01_hn")
-        self.assertTrue(any("lệch" in w for w in warnings), warnings)
+        self.assertTrue(any("differ by" in w for w in warnings), warnings)
         self.assertEqual(b01["280"], b01["440"])
 
     def test_member_companies_inactive_in_switcher(self):
@@ -224,7 +224,7 @@ class TestConsolidation(TransactionCase):
         })
         env = self.env(user=user, context={"allowed_company_ids": [self.parent.id]})
         data = env["vn.report.wizard"].get_dynamic_report({
-            "report_id": self.env.ref("l10n_vn_tt99_consolidation.report_b02_hn").id,
+            "report_id": self.env.ref("l10n_vn_consolidation.report_b02_hn").id,
             "consolidation_group_id": self.group.id,
             "date_from": "2026-01-01",
             "date_to": "2026-12-31",
@@ -243,7 +243,7 @@ class TestConsolidation(TransactionCase):
         wizard = self.env["vn.report.wizard"].create(
             {
                 "consolidation_group_id": self.group.id,
-                "report_id": self.env.ref("l10n_vn_tt99_consolidation.report_b01_hn").id,
+                "report_id": self.env.ref("l10n_vn_consolidation.report_b01_hn").id,
                 "company_id": self.parent.id,
                 "date_from": YEAR_START,
                 "date_to": YEAR_END,

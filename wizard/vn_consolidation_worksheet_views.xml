@@ -24,21 +24,21 @@
                         <field name="company_id"/>
                         <field name="code"/>
                         <field name="partner_id" optional="show"/>
-                        <field name="debit" sum="Nợ"/>
-                        <field name="credit" sum="Có"/>
+                        <field name="debit" sum="Debit"/>
+                        <field name="credit" sum="Credit"/>
                         <field name="currency_id" column_invisible="1"/>
                     </list>
                 </field>
                 <footer>
-                    <button name="action_compute" type="object" string="Tính" class="btn-primary"/>
-                    <button special="cancel" string="Đóng"/>
+                    <button name="action_compute" type="object" string="Compute" class="btn-primary"/>
+                    <button special="cancel" string="Close"/>
                 </footer>
             </form>
         </field>
     </record>
 
     <record id="vn_consolidation_worksheet_action" model="ir.actions.act_window">
-        <field name="name">Bảng tính loại trừ</field>
+        <field name="name">Elimination Worksheet</field>
         <field name="res_model">vn.consolidation.worksheet</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>

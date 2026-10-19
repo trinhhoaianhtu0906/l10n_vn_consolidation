@@ -1,0 +1,1415 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_vn_consolidation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "%(company)s uses %(currency)s, not the currency of the group. Translating foreign currency statements is not supported yet."
+msgstr "%(company)s dùng tiền tệ %(currency)s khác tiền tệ của nhóm. Chưa hỗ trợ chuyển đổi báo cáo ngoại tệ khi hợp nhất."
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,form_note:l10n_vn_consolidation.report_b01_hn
+#: model:vn.report,form_note:l10n_vn_consolidation.report_b02_hn
+msgid "(Issued under Circular No. 202/2014/TT-BTC as amended by Circular No. 43/2026/TT-BTC; forms of Circular No. 99/2025/TT-BTC)"
+msgstr "(Ban hành theo Thông tư số 202/2014/TT-BTC, sửa đổi bởi Thông tư số 43/2026/TT-BTC; mẫu theo Thông tư số 99/2025/TT-BTC)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_223
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_226
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_229
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_242
+msgid "- Accumulated depreciation (*)"
+msgstr "- Giá trị hao mòn lũy kế (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_235
+msgid "- Accumulated depreciation of mature livestock (*)"
+msgstr "- Giá trị khấu hao lũy kế (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_420a
+msgid "- Accumulated to the end of the previous period"
+msgstr "- LNST chưa phân phối lũy kế đến cuối kỳ trước"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_62
+msgid "- Attributable to non-controlling interests"
+msgstr "- Lợi nhuận sau thuế của cổ đông không kiểm soát"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_61
+msgid "- Attributable to the parent company"
+msgstr "- Lợi nhuận sau thuế của công ty mẹ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_222
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_225
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_228
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_234
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_241
+msgid "- Cost"
+msgstr "- Nguyên giá"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_420b
+msgid "- Of the current period"
+msgstr "- LNST chưa phân phối kỳ này"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_24
+msgid "- Of which: borrowing costs"
+msgstr "- Trong đó: Chi phí đi vay"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_411a
+msgid "- Ordinary shares with voting rights"
+msgstr "- Cổ phiếu phổ thông có quyền biểu quyết"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_411b
+msgid "- Preference shares"
+msgstr "- Cổ phiếu ưu đãi"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_111
+msgid "1. Cash"
+msgstr "1. Tiền"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_141
+msgid "1. Inventories"
+msgstr "1. Hàng tồn kho"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_261
+msgid "1. Investments in subsidiaries"
+msgstr "1. Đầu tư vào công ty con"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_231
+msgid "1. Livestock producing periodic products"
+msgstr "1. Súc vật nuôi cho sản phẩm định kỳ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_271
+msgid "1. Long-term deferred costs"
+msgstr "1. Chi phí chờ phân bổ dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_331
+msgid "1. Long-term trade payables"
+msgstr "1. Phải trả người bán dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_211
+msgid "1. Long-term trade receivables"
+msgstr "1. Phải thu dài hạn của khách hàng"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_251
+msgid "1. Long-term work in progress"
+msgstr "1. Chi phí sản xuất, kinh doanh dở dang dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_411
+msgid "1. Owners' contributed capital"
+msgstr "1. Vốn góp của chủ sở hữu"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_01
+msgid "1. Revenue from sales of goods and services"
+msgstr "1. Doanh thu bán hàng và cung cấp dịch vụ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_161
+msgid "1. Short-term deferred costs"
+msgstr "1. Chi phí chờ phân bổ ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_151
+msgid "1. Short-term livestock for one-time harvest"
+msgstr "1. Súc vật nuôi lấy sản phẩm một lần ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_311
+msgid "1. Short-term trade payables"
+msgstr "1. Phải trả người bán ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_131
+msgid "1. Short-term trade receivables"
+msgstr "1. Phải thu ngắn hạn của khách hàng"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_221
+msgid "1. Tangible fixed assets"
+msgstr "1. Tài sản cố định hữu hình"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_121
+msgid "1. Trading securities"
+msgstr "1. Chứng khoán kinh doanh"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_340
+msgid "10. Convertible bonds"
+msgstr "10. Trái phiếu chuyển đổi"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_26
+msgid "10. General and administrative expenses"
+msgstr "10. Chi phí quản lý doanh nghiệp"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_320
+msgid "10. Other short-term payables"
+msgstr "10. Phải trả ngắn hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_420
+msgid "10. Undistributed profit after tax"
+msgstr "10. Lợi nhuận sau thuế chưa phân phối"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_429
+msgid "11. Non-controlling interests"
+msgstr "11. Lợi ích cổ đông không kiểm soát"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_30
+msgid "11. Operating profit"
+msgstr "11. Lợi nhuận thuần từ hoạt động kinh doanh"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_341
+msgid "11. Preference shares"
+msgstr "11. Cổ phiếu ưu đãi"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_27
+msgid "11. Share of profit or loss of joint ventures and associates"
+msgstr "11. Phần lãi hoặc lỗ trong công ty liên doanh, liên kết"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_321
+msgid "11. Short-term borrowings and finance lease liabilities"
+msgstr "11. Vay và nợ thuê tài chính ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_342
+msgid "12. Deferred tax liabilities"
+msgstr "12. Thuế thu nhập hoãn lại phải trả"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_31
+msgid "12. Other income"
+msgstr "12. Thu nhập khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_322
+msgid "12. Short-term provisions"
+msgstr "12. Dự phòng phải trả ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_323
+msgid "13. Bonus and welfare funds"
+msgstr "13. Quỹ khen thưởng, phúc lợi"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_343
+msgid "13. Long-term provisions"
+msgstr "13. Dự phòng phải trả dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_32
+msgid "13. Other expenses"
+msgstr "13. Chi phí khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_40
+msgid "14. Other profit"
+msgstr "14. Lợi nhuận khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_324
+msgid "14. Price stabilisation fund"
+msgstr "14. Quỹ bình ổn giá"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_344
+msgid "14. Science and technology development fund"
+msgstr "14. Quỹ phát triển khoa học và công nghệ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_50
+msgid "15. Accounting profit before tax"
+msgstr "15. Tổng lợi nhuận kế toán trước thuế"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_325
+msgid "15. Government bond repurchase transactions"
+msgstr "15. Giao dịch mua bán lại trái phiếu Chính phủ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_51
+msgid "16. Current corporate income tax expense"
+msgstr "16. Chi phí thuế TNDN hiện hành"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_52
+msgid "17. Deferred corporate income tax expense"
+msgstr "17. Chi phí thuế TNDN hoãn lại"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_60
+msgid "18. Profit after corporate income tax"
+msgstr "18. Lợi nhuận sau thuế thu nhập doanh nghiệp"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_70
+msgid "19. Basic earnings per share (*)"
+msgstr "19. Lãi cơ bản trên cổ phiếu (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_112
+msgid "2. Cash equivalents"
+msgstr "2. Các khoản tương đương tiền"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_252
+msgid "2. Construction in progress"
+msgstr "2. Chi phí xây dựng cơ bản dở dang"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_162
+msgid "2. Deductible VAT"
+msgstr "2. Thuế GTGT được khấu trừ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_272
+msgid "2. Deferred tax assets"
+msgstr "2. Tài sản thuế thu nhập hoãn lại"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_224
+msgid "2. Finance lease fixed assets"
+msgstr "2. Tài sản cố định thuê tài chính"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_262
+msgid "2. Investments in joint ventures and associates"
+msgstr "2. Đầu tư vào công ty liên doanh, liên kết"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_332
+msgid "2. Long-term advances from customers"
+msgstr "2. Người mua trả tiền trước dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_236
+msgid "2. Long-term livestock for one-time harvest"
+msgstr "2. Súc vật nuôi lấy sản phẩm một lần dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_212
+msgid "2. Long-term prepayments to suppliers"
+msgstr "2. Trả trước cho người bán dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_142
+msgid "2. Provision for decline in value of inventories (*)"
+msgstr "2. Dự phòng giảm giá hàng tồn kho (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_122
+msgid "2. Provision for diminution in value of trading securities (*)"
+msgstr "2. Dự phòng giảm giá chứng khoán kinh doanh (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_02
+msgid "2. Revenue deductions"
+msgstr "2. Các khoản giảm trừ doanh thu"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_412
+msgid "2. Share premium"
+msgstr "2. Thặng dư vốn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_312
+msgid "2. Short-term advances from customers"
+msgstr "2. Người mua trả tiền trước ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_132
+msgid "2. Short-term prepayments to suppliers"
+msgstr "2. Trả trước cho người bán ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_152
+msgid "2. Short-term seasonal or one-time-harvest crops"
+msgstr "2. Cây trồng theo mùa vụ hoặc lấy sản phẩm một lần ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_71
+msgid "20. Diluted earnings per share (*)"
+msgstr "20. Lãi suy giảm trên cổ phiếu (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_413
+msgid "3. Bond conversion options"
+msgstr "3. Quyền chọn chuyển đổi trái phiếu"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_313
+msgid "3. Dividends and profits payable"
+msgstr "3. Phải trả cổ tức, lợi nhuận"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_263
+msgid "3. Equity investments in other entities"
+msgstr "3. Đầu tư góp vốn vào đơn vị khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_227
+msgid "3. Intangible fixed assets"
+msgstr "3. Tài sản cố định vô hình"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_273
+msgid "3. Long-term equipment, supplies and spare parts"
+msgstr "3. Thiết bị, vật tư, phụ tùng thay thế dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_237
+msgid "3. Long-term seasonal or one-time-harvest crops"
+msgstr "3. Cây trồng theo mùa vụ hoặc lấy sản phẩm một lần dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_333
+msgid "3. Long-term taxes and amounts payable to the State"
+msgstr "3. Thuế và các khoản phải nộp Nhà nước dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_10
+msgid "3. Net revenue from sales of goods and services"
+msgstr "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_153
+msgid "3. Provision for losses on short-term biological assets (*)"
+msgstr "3. Dự phòng tổn thất tài sản sinh học ngắn hạn (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_123
+msgid "3. Short-term held-to-maturity investments"
+msgstr "3. Đầu tư nắm giữ đến ngày đáo hạn ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_163
+msgid "3. Taxes and other receivables from the State"
+msgstr "3. Thuế và các khoản khác phải thu Nhà nước"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_11
+msgid "4. Cost of goods sold"
+msgstr "4. Giá vốn hàng bán"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_164
+msgid "4. Government bond repurchase transactions"
+msgstr "4. Giao dịch mua bán lại trái phiếu Chính phủ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_334
+msgid "4. Long-term accrued expenses"
+msgstr "4. Chi phí phải trả dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_274
+msgid "4. Other non-current assets"
+msgstr "4. Tài sản dài hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_414
+msgid "4. Other owners' capital"
+msgstr "4. Vốn khác của chủ sở hữu"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_264
+msgid "4. Provision for long-term investment losses (*)"
+msgstr "4. Dự phòng tổn thất đầu tư vào đơn vị khác dài hạn (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_238
+msgid "4. Provision for losses on long-term biological assets (*)"
+msgstr "4. Dự phòng tổn thất tài sản sinh học dài hạn (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_124
+msgid "4. Provision for short-term held-to-maturity investments (*)"
+msgstr "4. Dự phòng đầu tư nắm giữ đến ngày đáo hạn ngắn hạn (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_134
+msgid "4. Receivables under construction contracts"
+msgstr "4. Phải thu theo tiến độ hợp đồng xây dựng"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_314
+msgid "4. Short-term taxes and amounts payable to the State"
+msgstr "4. Thuế và các khoản phải nộp Nhà nước ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_279
+msgid "5. Goodwill"
+msgstr "5. Lợi thế thương mại"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_20
+msgid "5. Gross profit from sales of goods and services"
+msgstr "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_265
+msgid "5. Long-term held-to-maturity investments"
+msgstr "5. Đầu tư nắm giữ đến ngày đáo hạn dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_165
+msgid "5. Other current assets"
+msgstr "5. Tài sản ngắn hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_215
+msgid "5. Other long-term receivables"
+msgstr "5. Phải thu dài hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_125
+msgid "5. Other short-term investments"
+msgstr "5. Đầu tư ngắn hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_135
+msgid "5. Other short-term receivables"
+msgstr "5. Phải thu ngắn hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_315
+msgid "5. Payables to employees"
+msgstr "5. Phải trả người lao động"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_415
+msgid "5. Treasury shares (*)"
+msgstr "5. Cổ phiếu mua lại của chính mình (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_416
+msgid "6. Asset revaluation differences"
+msgstr "6. Chênh lệch đánh giá lại tài sản"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_21
+msgid "6. Gain or loss on sale and disposal of investment property"
+msgstr "6. Lãi/lỗ của hoạt động bán, thanh lý bất động sản đầu tư"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_216
+msgid "6. Provision for long-term doubtful debts (*)"
+msgstr "6. Dự phòng phải thu dài hạn khó đòi (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_266
+msgid "6. Provision for long-term held-to-maturity investments (*)"
+msgstr "6. Dự phòng đầu tư nắm giữ đến ngày đáo hạn dài hạn (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_126
+msgid "6. Provision for losses on other short-term investments (*)"
+msgstr "6. Dự phòng tổn thất các khoản đầu tư ngắn hạn khác (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_136
+msgid "6. Provision for short-term doubtful debts (*)"
+msgstr "6. Dự phòng phải thu ngắn hạn khó đòi (*)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_316
+msgid "6. Short-term accrued expenses"
+msgstr "6. Chi phí phải trả ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_22
+msgid "7. Financial income"
+msgstr "7. Doanh thu hoạt động tài chính"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_417
+msgid "7. Foreign exchange differences"
+msgstr "7. Chênh lệch tỷ giá hối đoái"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_337
+msgid "7. Long-term deferred revenue"
+msgstr "7. Doanh thu chờ phân bổ dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_137
+msgid "7. Shortage of assets awaiting resolution"
+msgstr "7. Tài sản thiếu chờ xử lý"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_418
+msgid "8. Development investment fund"
+msgstr "8. Quỹ đầu tư phát triển"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_23
+msgid "8. Financial expenses"
+msgstr "8. Chi phí tài chính"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_338
+msgid "8. Other long-term payables"
+msgstr "8. Phải trả dài hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_318
+msgid "8. Short-term payables under construction contracts"
+msgstr "8. Phải trả theo tiến độ hợp đồng xây dựng ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_339
+msgid "9. Long-term borrowings and finance lease liabilities"
+msgstr "9. Vay và nợ thuê tài chính dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_419
+msgid "9. Other equity funds"
+msgstr "9. Quỹ khác thuộc vốn chủ sở hữu"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b02hn_25
+msgid "9. Selling expenses"
+msgstr "9. Chi phí bán hàng"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_319
+msgid "9. Short-term deferred revenue"
+msgstr "9. Doanh thu chờ phân bổ ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_100
+msgid "A - CURRENT ASSETS"
+msgstr "A - TÀI SẢN NGẮN HẠN"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "A company can only be a member of a group once."
+msgstr "Một công ty chỉ được khai báo một lần trong nhóm."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__code
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__code
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__code
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__code
+msgid "Account code, or HN_GW, HN_NCI, HN_PLNCI, HN_EQPL."
+msgstr "Mã tài khoản, hoặc HN_GW, HN_NCI, HN_PLNCI, HN_EQPL."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__acquisition_date
+msgid "Acquisition Date"
+msgstr "Ngày nắm quyền kiểm soát / ảnh hưởng"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__active
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__adjustment_id
+msgid "Adjustment"
+msgstr "Bút toán điều chỉnh"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "Adjustment %s is not balanced."
+msgstr "Bút toán điều chỉnh %s chưa cân Nợ - Có."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__adjustment_ids
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Adjustments"
+msgstr "Bút toán điều chỉnh"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_adjustment__state__confirmed
+msgid "Applied"
+msgstr "Áp dụng"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_adjustment__date
+msgid "Applies to every statement at this date or later."
+msgstr "Áp dụng cho mọi báo cáo lập từ ngày này trở đi."
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__kind
+msgid "Asset Type"
+msgstr "Loại tài sản"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_member__method__equity
+msgid "Associate or joint venture (equity method)"
+msgstr "Liên doanh, liên kết (vốn chủ sở hữu)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_200
+msgid "B - NON-CURRENT ASSETS"
+msgstr "B - TÀI SẢN DÀI HẠN"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,name:l10n_vn_consolidation.report_b01_hn
+msgid "B01-DN/HN Consolidated Statement of Financial Position"
+msgstr "B01-DN/HN Báo cáo tình hình tài chính hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,name:l10n_vn_consolidation.report_b02_hn
+msgid "B02-DN/HN Consolidated Income Statement"
+msgstr "B02-DN/HN Báo cáo kết quả hoạt động kinh doanh hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__buyer_company_id
+msgid "Buyer"
+msgstr "Bên mua"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_300
+msgid "C - LIABILITIES"
+msgstr "C - NỢ PHẢI TRẢ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,title:l10n_vn_consolidation.report_b02_hn
+msgid "CONSOLIDATED INCOME STATEMENT"
+msgstr "BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH HỢP NHẤT"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,title:l10n_vn_consolidation.report_b01_hn
+msgid "CONSOLIDATED STATEMENT OF FINANCIAL POSITION"
+msgstr "BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Close"
+msgstr "Đóng"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Compute"
+msgstr "Tính"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__computed
+msgid "Computed"
+msgstr "Đã tính"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+#: model:ir.actions.client,name:l10n_vn_consolidation.vn_dynamic_report_action_consolidated
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_report
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Consolidated Statements"
+msgstr "Báo cáo hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_root
+msgid "Consolidation"
+msgstr "Hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__group_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__consolidation_group_id
+msgid "Consolidation Group"
+msgstr "Nhóm hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.actions.act_window,name:l10n_vn_consolidation.vn_consolidation_group_action
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_group
+msgid "Consolidation Groups"
+msgstr "Nhóm hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_worksheet
+msgid "Consolidation elimination worksheet"
+msgstr "Bảng tính loại trừ hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_worksheet_line
+msgid "Consolidation elimination worksheet line"
+msgstr "Dòng bảng tính loại trừ hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_group
+msgid "Consolidation group"
+msgstr "Nhóm hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_member
+msgid "Consolidation group member"
+msgstr "Thành viên nhóm hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__cit_rate
+msgid "Corporate Income Tax Rate (%)"
+msgstr "Thuế suất TNDN (%)"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.actions.act_window,help:l10n_vn_consolidation.vn_consolidation_group_action
+msgid "Create your first consolidation group"
+msgstr "Tạo nhóm hợp nhất đầu tiên"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__create_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__create_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__credit
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__credit
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Credit"
+msgstr "Có"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__amount
+msgid "Credit Balance"
+msgstr "Số dư Có"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__currency_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_400
+msgid "D - OWNERS' EQUITY"
+msgstr "D - VỐN CHỦ SỞ HỮU"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__acquisition_date
+msgid "Date control or significant influence was obtained."
+msgstr "Ngày nắm quyền kiểm soát hoặc ảnh hưởng đáng kể."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__debit
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__debit
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_worksheet_view_form
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__name
+msgid "Description"
+msgstr "Diễn giải"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__display_name
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Dividends from associate"
+msgstr "Cổ tức từ công ty liên kết"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_adjustment__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__date
+msgid "Effective Date"
+msgstr "Ngày hiệu lực"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__rule
+msgid "Elimination"
+msgstr "Loại bút toán"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+#: code:addons/l10n_vn_consolidation/wizard/vn_consolidation_worksheet.py:0
+#: model:ir.actions.act_window,name:l10n_vn_consolidation.vn_consolidation_worksheet_action
+#: model:ir.ui.menu,name:l10n_vn_consolidation.menu_vn_consolidation_worksheet
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Elimination Worksheet"
+msgstr "Bảng tính loại trừ"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__line_ids
+msgid "Eliminations"
+msgstr "Bút toán loại trừ"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__snapshot_line_ids
+msgid "Empty: read from the subsidiary's ledger at the acquisition date."
+msgstr "Để trống: tự lấy từ sổ của công ty con tại ngày mua."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__investment_cost
+msgid "Empty: the balance of account 221 (or 222) of the parent company for this company as partner, at the acquisition date."
+msgstr "Để trống: lấy số dư TK 221 (hoặc 222) của công ty mẹ, chi tiết theo đối tượng là công ty này, tại ngày mua."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__code
+msgid "Equity account code (4xxx). HN_PREACQ: unclosed profit or loss earned before the acquisition."
+msgstr "Mã tài khoản vốn chủ sở hữu (4xxx). HN_PREACQ: lãi lỗ trước ngày mua chưa kết chuyển."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__snapshot_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Equity at Acquisition"
+msgstr "Vốn chủ sở hữu tại ngày mua"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Equity method"
+msgstr "Phương pháp vốn chủ sở hữu"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_snapshot_line
+msgid "Equity of a subsidiary at acquisition"
+msgstr "Vốn chủ sở hữu công ty con tại ngày mua"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_unrealized__kind__fixed_asset
+msgid "Fixed Asset"
+msgstr "Tài sản cố định"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,form_code:l10n_vn_consolidation.report_b01_hn
+msgid "Form B 01 - DN/HN"
+msgstr "Mẫu số B 01 - DN/HN"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,form_code:l10n_vn_consolidation.report_b02_hn
+msgid "Form B 02 - DN/HN"
+msgstr "Mẫu số B 02 - DN/HN"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Gain on bargain purchase"
+msgstr "Lãi từ giao dịch mua rẻ"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__goodwill_years
+msgid "Goodwill Amortisation (Years)"
+msgstr "Số năm phân bổ lợi thế thương mại"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Goodwill amortisation"
+msgstr "Phân bổ lợi thế thương mại"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "Goodwill is amortised over 1 to 10 years."
+msgstr "Thời gian phân bổ lợi thế thương mại từ 1 đến 10 năm."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__group_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__group_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__group_id
+msgid "Group"
+msgstr "Nhóm"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_110
+msgid "I. Cash and cash equivalents"
+msgstr "I. Tiền và các khoản tương đương tiền"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_310
+msgid "I. Current liabilities"
+msgstr "I. Nợ ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_210
+msgid "I. Long-term receivables"
+msgstr "I. Các khoản phải thu dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_220
+msgid "II. Fixed assets"
+msgstr "II. Tài sản cố định"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_330
+msgid "II. Non-current liabilities"
+msgstr "II. Nợ dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_120
+msgid "II. Short-term financial investments"
+msgstr "II. Đầu tư tài chính ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_230
+msgid "III. Long-term biological assets"
+msgstr "III. Tài sản sinh học dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_130
+msgid "III. Short-term receivables"
+msgstr "III. Các khoản phải thu ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_140
+msgid "IV. Inventories"
+msgstr "IV. Hàng tồn kho"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_240
+msgid "IV. Investment property"
+msgstr "IV. Bất động sản đầu tư"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_member__ownership_pct
+msgid "Interest of the parent company, direct and indirect."
+msgstr "Tỷ lệ lợi ích của công ty mẹ, kể cả gián tiếp."
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group balance difference"
+msgstr "Chênh lệch công nợ nội bộ"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group balances between %(first)s and %(second)s differ by %(difference)s at %(date)s; the difference is held in 1388/3388."
+msgstr "Công nợ nội bộ giữa %(first)s và %(second)s lệch %(difference)s tại %(date)s; phần lệch được treo ở 1388/3388."
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group balances eliminated"
+msgstr "Loại trừ công nợ nội bộ"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group dividends eliminated"
+msgstr "Loại trừ cổ tức nội bộ"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Intra-group revenue and expenses eliminated"
+msgstr "Loại trừ doanh thu, chi phí nội bộ"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_unrealized__kind__inventory
+msgid "Inventory"
+msgstr "Hàng tồn kho"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__investment_cost
+msgid "Investment Cost"
+msgstr "Giá gốc khoản đầu tư"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Investment in subsidiary eliminated"
+msgstr "Loại trừ khoản đầu tư vào công ty con"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__write_uid
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__write_date
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__line_ids
+msgid "Lines"
+msgstr "Chỉ tiêu"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_adjustment
+msgid "Manual consolidation adjustment"
+msgstr "Bút toán điều chỉnh hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_adjustment_line
+msgid "Manual consolidation adjustment line"
+msgstr "Dòng bút toán điều chỉnh hợp nhất"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_snapshot_line__member_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__company_id
+msgid "Member"
+msgstr "Thành viên"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__member_ids
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Members"
+msgstr "Thành viên"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__method
+msgid "Method"
+msgstr "Phương pháp"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "No cost found for the investment in %(company)s: account 221 of the parent company has no balance for this partner. Enter the cost on the group member."
+msgstr "Không tìm thấy giá gốc khoản đầu tư vào %(company)s: TK 221 của công ty mẹ không có số dư chi tiết theo đối tượng này. Nhập giá gốc trên thành viên nhóm."
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Non-controlling interest"
+msgstr "Lợi ích cổ đông không kiểm soát"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__note
+msgid "Note"
+msgstr "Thuyết minh"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_member__ownership_pct
+msgid "Ownership (%)"
+msgstr "Tỷ lệ lợi ích (%)"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.constraint,message:l10n_vn_consolidation.constraint_vn_consolidation_member_pct_check
+msgid "Ownership must be above 0 and at most 100%."
+msgstr "Tỷ lệ lợi ích phải lớn hơn 0 và không quá 100%."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__parent_company_id
+msgid "Parent Company"
+msgstr "Công ty mẹ"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment_line__partner_id
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__partner_id
+msgid "Partner"
+msgstr "Đối tượng"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__goods_value
+msgid "Remaining Intra-group Assets"
+msgstr "Giá trị tài sản nội bộ còn lại"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_unrealized__amount
+msgid "Remaining value x gross margin; can be edited."
+msgstr "Tự tính = giá trị còn lại x tỷ suất lãi gộp; có thể sửa tay."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_report_wizard__report_id
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_unrealized__date
+msgid "Reporting date of the consolidated statements (period end)."
+msgstr "Ngày lập báo cáo hợp nhất (cuối kỳ)."
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Reset to Draft"
+msgstr "Về nháp"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/wizard/vn_report_wizard.py:0
+msgid "Select a consolidation group for a consolidated statement."
+msgstr "Báo cáo hợp nhất cần chọn nhóm hợp nhất."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__seller_company_id
+msgid "Seller"
+msgstr "Bên bán"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__margin_pct
+msgid "Seller Gross Margin (%)"
+msgstr "Tỷ suất lãi gộp bên bán (%)"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.actions.act_window,help:l10n_vn_consolidation.vn_consolidation_group_action
+msgid "Set the parent company, the subsidiaries and associates, the ownership and the acquisition dates."
+msgstr "Khai báo công ty mẹ, các công ty con và công ty liên kết, tỷ lệ lợi ích và ngày mua."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_adjustment__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_group__goodwill_years
+msgid "Straight line, at most 10 years under Circular 202/2014/TT-BTC."
+msgstr "Phân bổ đều, tối đa 10 năm theo Thông tư 202/2014/TT-BTC."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields.selection,name:l10n_vn_consolidation.selection__vn_consolidation_member__method__full
+msgid "Subsidiary (full consolidation)"
+msgstr "Công ty con (hợp nhất toàn bộ)"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_280
+msgid "TOTAL ASSETS"
+msgstr "TỔNG CỘNG TÀI SẢN"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_440
+msgid "TOTAL LIABILITIES AND EQUITY"
+msgstr "TỔNG CỘNG NGUỒN VỐN"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Take Balances at Acquisition"
+msgstr "Lấy số dư tại ngày mua"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__tax_rate
+msgid "Tax Rate (%)"
+msgstr "Thuế suất TNDN (%)"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "The consolidated cash flow statement is not supported yet."
+msgstr "Chưa hỗ trợ báo cáo lưu chuyển tiền tệ hợp nhất."
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/vn_consolidation.py:0
+msgid "The parent company cannot also be a member."
+msgstr "Công ty mẹ không được khai báo là thành viên."
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Total"
+msgstr "Tổng"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report,check_message:l10n_vn_consolidation.report_b01_hn
+msgid "Total assets (280) differ from total liabilities and equity (440)"
+msgstr "Tổng tài sản (280) không bằng tổng nguồn vốn (440)"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_group__unrealized_ids
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_unrealized__amount
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "Unrealised Profit"
+msgstr "Lãi chưa thực hiện"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_consolidation_unrealized
+msgid "Unrealised intra-group profit at a reporting date"
+msgstr "Lãi nội bộ chưa thực hiện tại ngày lập báo cáo"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Unrealised profit"
+msgstr "Lãi chưa thực hiện"
+
+#. module: l10n_vn_consolidation
+#. odoo-python
+#: code:addons/l10n_vn_consolidation/models/consolidation_engine.py:0
+msgid "Unrealised profit - non-controlling interest"
+msgstr "Lãi chưa thực hiện - phần lợi ích cổ đông không kiểm soát"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_250
+msgid "V. Long-term assets in progress"
+msgstr "V. Tài sản dở dang dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_150
+msgid "V. Short-term biological assets"
+msgstr "V. Tài sản sinh học ngắn hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_260
+msgid "VI. Long-term financial investments"
+msgstr "VI. Đầu tư tài chính dài hạn"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_160
+msgid "VI. Other current assets"
+msgstr "VI. Tài sản ngắn hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_270
+msgid "VII. Other non-current assets"
+msgstr "VII. Tài sản dài hạn khác"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,help:l10n_vn_consolidation.field_vn_consolidation_unrealized__goods_value
+msgid "Value at the buyer's purchase price still held at the reporting date."
+msgstr "Giá trị theo giá mua của bên mua, còn tồn tại ngày lập báo cáo."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model,name:l10n_vn_consolidation.model_vn_report_wizard
+msgid "Vietnamese financial statement wizard"
+msgstr "Lập báo cáo tài chính Việt Nam"
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet__warning_text
+msgid "Warnings"
+msgstr "Cảnh báo"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid ""
+"When empty, it is read from the subsidiary's ledger at the acquisition date.\n"
+"                                        Click \"Take Balances at Acquisition\" to store it, review it and adjust it (e.g. fair value differences)."
+msgstr ""
+"Để trống thì hệ thống tự lấy từ sổ của công ty con tại ngày mua.\n"
+"                                        Bấm \"Lấy số dư tại ngày mua\" để lưu lại, kiểm tra và điều chỉnh (ví dụ chênh lệch đánh giá lại theo giá trị hợp lý)."
+
+#. module: l10n_vn_consolidation
+#: model:ir.model.fields,field_description:l10n_vn_consolidation.field_vn_consolidation_worksheet_line__worksheet_id
+msgid "Worksheet"
+msgstr "Bảng tính"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_232
+msgid "a) Immature livestock producing periodic products"
+msgstr "a) Súc vật nuôi cho sản phẩm định kỳ chưa đến giai đoạn trưởng thành"
+
+#. module: l10n_vn_consolidation
+#: model:vn.report.line,name:l10n_vn_consolidation.b01hn_233
+msgid "b) Mature livestock producing periodic products"
+msgstr "b) Súc vật nuôi cho sản phẩm định kỳ đến giai đoạn trưởng thành"
+
+#. module: l10n_vn_consolidation
+#: model_terms:ir.ui.view,arch_db:l10n_vn_consolidation.vn_consolidation_group_view_form
+msgid "e.g. ABC Group"
+msgstr "Ví dụ: Tập đoàn ABC"

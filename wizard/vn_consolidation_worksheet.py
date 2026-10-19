@@ -1,15 +1,16 @@
 from odoo import fields, models
+from odoo.tools.translate import LazyGettext
 
 
 class VnConsolidationWorksheet(models.TransientModel):
     _name = "vn.consolidation.worksheet"
     _description = "Consolidation elimination worksheet"
 
-    group_id = fields.Many2one("vn.consolidation.group", string="Nhóm hợp nhất", required=True)
+    group_id = fields.Many2one("vn.consolidation.group", string="Consolidation Group", required=True)
     currency_id = fields.Many2one(related="group_id.currency_id")
-    date = fields.Date(string="Tại ngày", required=True, default=fields.Date.context_today)
-    line_ids = fields.One2many("vn.consolidation.worksheet.line", "worksheet_id", string="Bút toán loại trừ")
-    warning_text = fields.Text(string="Cảnh báo", readonly=True)
+    date = fields.Date(string="Date", required=True, default=fields.Date.context_today)
+    line_ids = fields.One2many("vn.consolidation.worksheet.line", "worksheet_id", string="Eliminations")
+    warning_text = fields.Text(string="Warnings", readonly=True)
     computed = fields.Boolean(readonly=True)
 
     def action_compute(self):
@@ -21,7 +22,7 @@ class VnConsolidationWorksheet(models.TransientModel):
             commands.append(
                 fields.Command.create(
                     {
-                        "rule": rule,
+                        "rule": self.env._(rule) if isinstance(rule, LazyGettext) else rule,
                         "company_id": member.company_id.id if member else False,
                         "code": row.code,
                         "partner_id": Partner.browse(row.partner_id).id if row.partner_id else False,
@@ -38,7 +39,7 @@ class VnConsolidationWorksheet(models.TransientModel):
             "res_id": self.id,
             "view_mode": "form",
             "target": "new",
-            "name": self.env._("Bảng tính loại trừ"),
+            "name": self.env._("Elimination Worksheet"),
         }
 
 
@@ -49,9 +50,9 @@ class VnConsolidationWorksheetLine(models.TransientModel):
 
     worksheet_id = fields.Many2one("vn.consolidation.worksheet", required=True, ondelete="cascade")
     currency_id = fields.Many2one(related="worksheet_id.currency_id")
-    rule = fields.Char(string="Loại bút toán", readonly=True)
-    company_id = fields.Many2one("res.company", string="Thành viên", readonly=True)
-    code = fields.Char(string="Tài khoản", readonly=True)
-    partner_id = fields.Many2one("res.partner", string="Đối tượng", readonly=True)
-    debit = fields.Monetary(string="Nợ", readonly=True)
-    credit = fields.Monetary(string="Có", readonly=True)
+    rule = fields.Char(string="Elimination", readonly=True)
+    company_id = fields.Many2one("res.company", string="Member", readonly=True)
+    code = fields.Char(string="Account", readonly=True)
+    partner_id = fields.Many2one("res.partner", string="Partner", readonly=True)
+    debit = fields.Monetary(string="Debit", readonly=True)
+    credit = fields.Monetary(string="Credit", readonly=True)

@@ -16,11 +16,14 @@ from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
 from odoo.exceptions import UserError
+from odoo.tools.translate import LazyTranslate
 
-from odoo.addons.l10n_vn_tt99_reports.models.engine import LedgerProvider, Row, is_pl_code, with_companies
+from odoo.addons.l10n_vn_financial_statements.models.engine import LedgerProvider, Row, is_pl_code, with_companies
 
 # Pseudo account codes. Formulas match codes by prefix, so none of these may
 # start with another one.
+_lt = LazyTranslate(__name__)
+
 PREACQ = "HN_PREACQ"  # subsidiary profit or loss earned before acquisition
 GOODWILL = "HN_GW"
 NCI = "HN_NCI"
@@ -61,8 +64,8 @@ class ConsolidationProvider:
             if member.company_id.currency_id != self.currency:
                 raise UserError(
                     self.env._(
-                        "%(company)s dùng tiền tệ %(currency)s khác tiền tệ của nhóm."
-                        " Chưa hỗ trợ chuyển đổi báo cáo ngoại tệ khi hợp nhất.",
+                        "%(company)s uses %(currency)s, not the currency of the group."
+                        " Translating foreign currency statements is not supported yet.",
                         company=member.company_id.name,
                         currency=member.company_id.currency_id.name,
                     )
@@ -98,7 +101,7 @@ class ConsolidationProvider:
         return result
 
     def cash_rows(self, date_from, date_to):
-        raise UserError(self.env._("Chưa hỗ trợ báo cáo lưu chuyển tiền tệ hợp nhất."))
+        raise UserError(self.env._("The consolidated cash flow statement is not supported yet."))
 
     def extra_warnings(self, date_from, date_to):
         self.eliminations(date_to)
@@ -200,21 +203,24 @@ class ConsolidationProvider:
 
     def _investment(self, member, day):
         """Investment against equity at acquisition, goodwill, NCI at acquisition."""
-        rule = "Loại trừ khoản đầu tư vào công ty con"
+        rule = _lt("Investment in subsidiary eliminated")
         share = member.ownership_pct / 100
         fy_start = self.fiscal_year_start(day)
         equity = self.acquisition_equity(member)
         entries = []
         for code, amount in equity.items():
-            # Retained earnings of an earlier year now sit in "lũy kế đến cuối kỳ trước".
+            # Retained earnings of an earlier year now sit in the "prior years" account (4211).
             if member.acquisition_date < fy_start and code.startswith("4212"):
                 code = "4211"
             entries.append((rule, member, _row(code, self._round(amount))))
         cost = self._round(self.investment_cost(member))
         if not cost:
             self._warnings[day].append(
-                f"Không tìm thấy giá gốc khoản đầu tư vào {member.company_id.name}: TK 221 của công ty mẹ"
-                f" không có số dư chi tiết theo đối tượng này. Nhập giá gốc trên thành viên nhóm."
+                self.env._(
+                    "No cost found for the investment in %(company)s: account 221 of the parent company has no"
+                    " balance for this partner. Enter the cost on the group member.",
+                    company=member.company_id.name,
+                )
             )
         entries.append((rule, member, _row("221", -cost)))
         nci = self._round((1 - share) * sum(equity.values()))
@@ -224,7 +230,7 @@ class ConsolidationProvider:
         if goodwill >= 0:
             entries.append((rule, member, _row(GOODWILL, goodwill)))
         else:
-            entries.append(("Lãi từ giao dịch mua rẻ", member, _row("711", goodwill)))
+            entries.append((_lt("Gain on bargain purchase"), member, _row("711", goodwill)))
         return entries
 
     def _goodwill_amortisation(self, member, day):
@@ -235,7 +241,7 @@ class ConsolidationProvider:
         elapsed = relativedelta(day + timedelta(days=1), member.acquisition_date + timedelta(days=1))
         months = min(elapsed.years * 12 + elapsed.months, total_months)
         amount = self._round(goodwill * months / total_months)
-        rule = "Phân bổ lợi thế thương mại"
+        rule = _lt("Goodwill amortisation")
         return [(rule, member, _row("642", amount)), (rule, member, _row(GOODWILL, -amount))]
 
     def _non_controlling_interest(self, member, day):
@@ -243,7 +249,7 @@ class ConsolidationProvider:
         if minority <= 0:
             return []
         profit, equity = self._post_acquisition(member, day)
-        rule = "Lợi ích cổ đông không kiểm soát"
+        rule = _lt("Non-controlling interest")
         entries = [(rule, member, _row(NCI_PL, self._round(minority * profit)))]
         for code, amount in equity.items():
             entries.append((rule, member, _row(code, self._round(minority * amount))))
@@ -256,7 +262,7 @@ class ConsolidationProvider:
         share = member.ownership_pct / 100
         partner_id = member.company_id.partner_id.commercial_partner_id.id
         profit, equity = self._post_acquisition(member, day)
-        rule = "Phương pháp vốn chủ sở hữu"
+        rule = _lt("Equity method")
         profit_share = self._round(share * profit)
         other_share = self._round(share * sum(equity.values()))
         entries = [
@@ -275,8 +281,8 @@ class ConsolidationProvider:
         dividends = self._round(dividends)
         if dividends:
             entries += [
-                ("Cổ tức từ công ty liên kết", member, _row("515", dividends)),
-                ("Cổ tức từ công ty liên kết", member, _row("4211", -dividends)),
+                (_lt("Dividends from associate"), member, _row("515", dividends)),
+                (_lt("Dividends from associate"), member, _row("4211", -dividends)),
             ]
         return entries
 
@@ -300,7 +306,7 @@ class ConsolidationProvider:
         return other
 
     def _intra_group_balances(self, day):
-        rule = "Loại trừ công nợ nội bộ"
+        rule = _lt("Intra-group balances eliminated")
         entries = []
         by_pair = defaultdict(float)
         for owner, ledger in self._group_ledgers(day, with_members=True):
@@ -317,13 +323,19 @@ class ConsolidationProvider:
         difference = self._round(sum(by_pair.values()))
         if difference:
             code = "13881" if difference > 0 else "33881"
-            entries.append(("Chênh lệch công nợ nội bộ", False, _row(code, difference)))
+            entries.append((_lt("Intra-group balance difference"), False, _row(code, difference)))
         for pair, balance in by_pair.items():
             if self._round(balance):
                 names = [self._member_name(member_id) for member_id in pair]
                 self._warnings[day].append(
-                    f"Công nợ nội bộ giữa {names[0]} và {names[1]} lệch"
-                    f" {self._round(balance):,.0f} tại {day:%d/%m/%Y}; phần lệch được treo ở 1388/3388."
+                    self.env._(
+                        "Intra-group balances between %(first)s and %(second)s differ by %(difference)s"
+                        " at %(date)s; the difference is held in 1388/3388.",
+                        first=names[0],
+                        second=names[1],
+                        difference=f"{self._round(balance):,.0f}",
+                        date=f"{day:%d/%m/%Y}",
+                    )
                 )
         return entries
 
@@ -334,7 +346,7 @@ class ConsolidationProvider:
 
     def _intra_group_profit_and_loss(self, day):
         """Intra-group revenue against the buyer's expenses; the rest is resold goods."""
-        rule = "Loại trừ doanh thu, chi phí nội bộ"
+        rule = _lt("Intra-group revenue and expenses eliminated")
         joined = {False: None}
         for member in self.full_members:
             joined[member] = member.acquisition_date
@@ -378,7 +390,7 @@ class ConsolidationProvider:
                 entries.append((rule, seller, _row("632", -goods)))
             if finance:
                 # Financial income left after interest: dividends from a subsidiary.
-                entries.append(("Loại trừ cổ tức nội bộ", seller, _row("4211", -finance)))
+                entries.append((_lt("Intra-group dividends eliminated"), seller, _row("4211", -finance)))
         return entries
 
     def _unrealised_profit(self, day):
@@ -388,7 +400,7 @@ class ConsolidationProvider:
             if not amount:
                 continue
             tax = self._round(amount * record.tax_rate / 100)
-            rule = "Lãi chưa thực hiện"
+            rule = _lt("Unrealised profit")
             if record.kind == "inventory":
                 entries += [(rule, False, _row("632", amount)), (rule, False, _row("156", -amount))]
             else:
@@ -400,8 +412,8 @@ class ConsolidationProvider:
             if seller and seller.ownership_pct < 100:
                 share = self._round((1 - seller.ownership_pct / 100) * (amount - tax))
                 entries += [
-                    ("Lãi chưa thực hiện - phần LIC ĐKKS", seller, _row(NCI, share)),
-                    ("Lãi chưa thực hiện - phần LIC ĐKKS", seller, _row(NCI_PL, -share)),
+                    (_lt("Unrealised profit - non-controlling interest"), seller, _row(NCI, share)),
+                    (_lt("Unrealised profit - non-controlling interest"), seller, _row(NCI_PL, -share)),
                 ]
         return entries
 
